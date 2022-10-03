@@ -1,0 +1,19 @@
+{
+  "name": "blogapi",
+  "version": "1.0.0",
+  "description": "Final Project BIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "author": "Sneaker Likes",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.2"
+  }
+}
