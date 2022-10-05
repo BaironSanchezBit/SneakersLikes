@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+
+.menuHamb, .divBrowser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navAll{
+    border-bottom: 4px solid #ED6D1B;
+    padding: 7px 0;
+    background-color: #f4f4f4;
+}
+.textPoppies{
+    font-family: 'Signika Negative', sans-serif;
+    color: #2b2b2b;
+}
+.imgLogo{
+    width: "300px"; 
+    height: "80px";
+}
+.navAllHambur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid #ED6D1B;
+    padding: 7px 0;
+
+}
+.divLogoHamb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.imgLogoHamb{
+    width: 350px;
+}
+.topVentas{
+    background-image: url("https://sneakerhdwallpapers.com/wallpapers/2016/yeezy-boost-v2-black-wallpaper-hd.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 750px;
+    padding: 50px ;
+}
+.textTopVentas{
+    font-size: 5rem;
+    font-weight: bold;
+}
+.lineWhite{
+    border-top: 4px solid #eee;
+    padding-right: 10%;
+}
+
+@media (max-width: 1140px){
+    .imgLogo{
+        margin-left: 10%;
+        width: 280px;
+        height: 80px;
+    }
+}
+@media (max-width: 1140px){
+    .div-Container{
+        display: none !important;
+    }
+    .navAll{
+        justify-content: space-between;
+    }
+}

@@ -2,3 +2,25 @@ footer{
     height: 120px;
     background-color: #ED6D1B;
 }
+.faIcon{
+    font-size: 28px;
+}
+
+@media (max-width: 1020px) {
+    .divAll{
+        flex-direction: column;
+    }
+    .imgLogo{
+        width: 200px;
+    }
+    .divFaIcon{
+        padding: 2% 0;
+    }
+    .faIcon{
+        font-size: 20px;
+    }
+    .textDerechos{
+        font-size: 10px;
+        margin: 0;
+    }
+}
