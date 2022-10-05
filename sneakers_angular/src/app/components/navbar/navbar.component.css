@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
 
+.sectionNav{
+    position: sticky;
+    top: 0;
+}
 .menuHamb, .divBrowser{
     display: flex;
     justify-content: center;
@@ -9,6 +13,7 @@
     border-bottom: 4px solid #ED6D1B;
     padding: 7px 0;
     background-color: #f4f4f4;
+
 }
 .textPoppies{
     font-family: 'Signika Negative', sans-serif;
