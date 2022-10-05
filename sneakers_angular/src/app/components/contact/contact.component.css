@@ -1,0 +1,36 @@
+.topVentas{
+    background-image: url("https://sneakerhdwallpapers.com/wallpapers/2016/yeezy-boost-v2-black-wallpaper-hd.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30vh;
+    padding: 50px ;
+}
+.textTopVentas{
+    font-size: 5rem;
+    font-weight: bold;
+}
+.lineWhite{
+    border-top: 4px solid #eee;
+    padding-right: 10%;
+}
+.sectionContact{
+    padding: 2% 0;
+}
+.faCont{
+    color: #ED6D1B;
+}
+.faIconFace{
+    border-radius: 50%;
+    background-color: #ED6D1B;
+    padding: 6px 12px;
+}
+.faIcon{
+    border-radius: 50%;
+    background-color: #ED6D1B;
+    padding: 6px 8px;
+}
+@media (max-width: 540px) {
+    .textTopVentas{
+        font-size: 4rem;
+    }
+}
