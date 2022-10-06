@@ -14,7 +14,7 @@
     padding-right: 10%;
 }
 .sectionContact{
-    padding: 2% 0;
+    padding: 67px 0;
 }
 .faCont{
     color: #ED6D1B;
@@ -29,8 +29,53 @@
     background-color: #ED6D1B;
     padding: 6px 8px;
 }
+.sectionSus{
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("https://img.freepik.com/free-photo/close-up-hands-with-pen-writing-notebook_23-2147601493.jpg?w=2000&t=st=1664992001~exp=1664992601~hmac=20de86c8c49d0352f326be7b5bb41100d0b898b06dc42e6560348539a4e4bdd1");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.imgLogo{
+    width: 500px;
+}
+.inputSus{
+   height: 50px; 
+}
 @media (max-width: 540px) {
     .textTopVentas{
         font-size: 4rem;
+    }
+}
+@media (max-width: 780px){
+    .textPrin{
+        font-size: 25px;
+        padding-top: 5%;
+    }
+    .imgLogo{
+        width: 350px;
+    }
+    .inputSus{
+        padding: 0 20px;
+    }
+    .lorem{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 1030px) {
+    .divAll{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .div1, .div2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
     }
 }
