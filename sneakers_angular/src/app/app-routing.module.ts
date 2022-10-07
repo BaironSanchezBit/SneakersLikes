@@ -5,6 +5,7 @@ import { DictionaryComponent } from './components/dictionary/dictionary.componen
 import { HomeComponent } from './components/home/home.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PostComponent } from './components/post/post.component';
+import { NewpostComponent } from './components/newpost/newpost.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'dictionary', component: DictionaryComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'post', component: PostComponent},
+  {path: 'newpost', component: NewpostComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
