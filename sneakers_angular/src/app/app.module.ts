@@ -10,7 +10,11 @@ import { PostComponent } from './components/post/post.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
+=======
+import { NewpostComponent } from './components/newpost/newpost.component';
+>>>>>>> b0b719e2c8b8c7be6b1279d907c4780c47e8375d
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PostComponent,
     ContactComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    NewpostComponent
   ],
   imports: [
     BrowserModule,
