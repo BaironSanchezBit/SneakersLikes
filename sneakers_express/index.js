@@ -9,7 +9,7 @@ conectarDB(); //Llamamos la funcion
 
 app.use(express.json());
 
-app.use('/api/productos', require('./routes/producto'));
+app.use('/api/productos', require('./routes/usuario'));
 
 //Creacion del servidor para ejecutarlo en http://localhost:4000/
 app.listen(4000, () => {
