@@ -64,3 +64,17 @@
     border-top: 4px solid #eee;
     padding-right: 10%;
 }
+
+@media (max-width: 1140px){
+    .imgLogo{
+        width: 380px;
+    }
+}
+@media (max-width: 1140px){
+    .div-Container{
+        display: none !important;
+    }
+    .navAll{
+        justify-content: space-between;
+    }
+}
