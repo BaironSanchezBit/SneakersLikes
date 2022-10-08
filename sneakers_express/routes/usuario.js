@@ -5,5 +5,6 @@ const usuarioController = require('../controllers/usuarioController')
 
 //Configuramos la ruta usando el controlador
 router.post('/', usuarioController.crearUsuario);
+router.get('/', usuarioController.obtenerUsuario)
 
 module.exports = router //Exportamos el modulo de rutas
