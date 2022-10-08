@@ -62,3 +62,11 @@ dd {
 }
 
 
+    @media (max-width: 540px) {
+        .textTopVentas{
+            font-size: 3rem;
+        }
+    }
+
+
+
