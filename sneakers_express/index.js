@@ -1,6 +1,7 @@
 /* CREACION DEL SERVIDOR */
 const express = require('express'); //Llamada del servicio de express
 const conectarDB = require('./config/db');
+const cors = require('cors')
 
 const app = express(); //Implementacion del servicio
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
 import Swal from 'sweetalert2'
 
 @Component({
@@ -13,7 +14,9 @@ export class HomeComponent implements OnInit {
 
   usuarioForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  listUsuario: Usuario[] = [];
+
+  constructor(private fb: FormBuilder, private router: Router, private _usuarioService: UsuarioService) {
     this.usuarioForm = this.fb.group({
       fullName: ['', [Validators.required]],
       username: ['', [Validators.required]],
@@ -24,6 +27,17 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.obtenerUsername();
+  }
+
+  obtenerUsername(){
+    this._usuarioService.getUsuario().subscribe( data => {
+      
+      this.listUsuario = data;
+      console.log( this.listUsuario);
+    }, error => {
+      console.log(error);
+    })
   }
 
   crearUsuario() {

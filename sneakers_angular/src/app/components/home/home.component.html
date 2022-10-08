@@ -391,10 +391,8 @@
             </div>
         </div>
         <div class="divBrowser col-3">
-            <div>
-                <a href="">
-                Username
-                </a>
+            <div *ngIf="listUsuario.length > 0">
+                <p *ngFor="let usuario of listUsuario"> {{usuario.username}} </p>
             </div>
         </div>
     </nav>
