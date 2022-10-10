@@ -1,35 +1,42 @@
-.topVentas{
+.topVentas {
     background-image: url("https://sneakerhdwallpapers.com/wallpapers/2016/yeezy-boost-v2-black-wallpaper-hd.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 30vh;
-    padding: 50px ;
+    padding: 50px;
 }
-.textTopVentas{
+
+.textTopVentas {
     font-size: 5rem;
     font-weight: bold;
 }
-.lineWhite{
+
+.lineWhite {
     border-top: 4px solid #eee;
     padding-right: 10%;
 }
-.sectionContact{
+
+.sectionContact {
     padding: 67px 0;
 }
-.faCont{
+
+.faCont {
     color: #ED6D1B;
 }
-.faIconFace{
+
+.faIconFace {
     border-radius: 50%;
     background-color: #ED6D1B;
     padding: 6px 12px;
 }
-.faIcon{
+
+.faIcon {
     border-radius: 50%;
     background-color: #ED6D1B;
     padding: 6px 8px;
 }
-.sectionSus{
+
+.sectionSus {
     height: 50vh;
     background-color: black;
     display: flex;
@@ -40,39 +47,48 @@
     background-size: 100%;
     background-repeat: no-repeat;
 }
-.imgLogo{
+
+.imgLogo {
     width: 500px;
 }
-.inputSus{
-   height: 50px; 
+
+.inputSus {
+    height: 50px;
 }
+
 @media (max-width: 540px) {
-    .textTopVentas{
+    .textTopVentas {
         font-size: 4rem;
     }
 }
-@media (max-width: 780px){
-    .textPrin{
+
+@media (max-width: 780px) {
+    .textPrin {
         font-size: 25px;
         padding-top: 5%;
     }
-    .imgLogo{
+
+    .imgLogo {
         width: 350px;
     }
-    .inputSus{
+
+    .inputSus {
         padding: 0 20px;
     }
-    .lorem{
+
+    .lorem {
         padding: 0 20px;
     }
 }
+
 @media (max-width: 1030px) {
-    .divAll{
+    .divAll {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
-    .div1, .div2{
+
+    .div1, .div2 {
         display: flex;
         flex-direction: column;
         justify-content: center;

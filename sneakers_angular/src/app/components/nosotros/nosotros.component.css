@@ -1,0 +1,116 @@
+
+
+/* .Nosotros{
+    width: 100vw;
+    height: 350px;
+    background: linear-gradient(to bottom, rgb(0 0 0/ .75), rgb(0 0 0/ .65)), url(/assets/img/Nike_Air_Max_360_KPU_Running_Shoes_Men_Grey_Black_All_310908-019.jpg); 
+    background-size: cover;
+    background-position: center; 
+    position: absolute;
+}
+
+.hijoNosotros{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-60%);
+    width: 700px;
+    margin: 0 0 0 99px;
+}
+.lineWhite{
+    border-top: 4px solid #eee;
+    padding-right: 10%;
+}
+
+.Nosotros-texto{
+    width:35%;
+    text-align: start;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 15px;
+} */
+
+.topVentas{
+    background-image: url("https://sneakerhdwallpapers.com/wallpapers/2016/yeezy-boost-v2-black-wallpaper-hd.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 30vh;
+    padding: 50px ;
+    position: relative;
+    z-index: -100;
+}
+.textTopVentas{
+    font-size: 5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-40%);
+}
+.lineWhite{
+    border-top: 4px solid #eee;
+    padding-right: 10%;
+}
+
+/* h1{
+    color: #fff;
+    font-weight: 700;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+} */
+
+.imgTenis{
+    width: 40%;
+    height: 35%;
+    position: relative;
+    z-index: -100;
+}
+
+.parrafo{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.hijo{
+    display: flex;
+}
+
+
+
+.caja{
+    width: 100vw;
+    padding-top: 10px;
+}
+.espacio-imagen{
+    height: 200px;
+    overflow-y: scroll;
+}
+@media (max-width: 540px) {
+    .textTopVentas{
+        font-size: 3rem;
+    }
+    .caja{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .parrafo{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 800px) {
+    .hijo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgTenis{
+        width: 400px;
+    }
+    .parrafo{
+        width: 80vw;
+    }
+}

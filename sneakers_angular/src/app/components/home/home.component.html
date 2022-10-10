@@ -326,40 +326,43 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
                                 <!-- Nombre Completo input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Full name</label>
-                                    <input type="text" id="form2Example1" class="form-control" />
+                                    <input type="text" id="form2Example1" class="form-control" formControlName="fullName"/>
+                                    <span *ngIf="usuarioForm.get('fullName')?.hasError('required') && usuarioForm.get('fullName')?.touched" class="text-danger ps-1 fw-bold">El nombre completo es obligatorio</span>
                                 </div>
 
                                 <!-- Username input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Username</label>
-                                    <input type="text" id="form2Example1" class="form-control" />
+                                    <input type="text" id="form2Example1" class="form-control" formControlName="username" />
+                                    <span *ngIf="usuarioForm.get('username')?.hasError('required') && usuarioForm.get('username')?.touched" class="text-danger ps-1 fw-bold">El username del usuario es obligatorio</span>
                                 </div>
 
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Email</label>
-                                    <input type="email" id="form2Example1" class="form-control" />
+                                    <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
+                                    <span *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched" class="text-danger ps-1 fw-bold">El correo electrónico es obligatorio</span>
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example2">Password</label>
-                                    <input type="password" id="form2Example2" class="form-control" />
+                                    <label class="form-label" for="password">Password</label>
+                                    <input type="password" id="password" class="form-control" formControlName="password" />
+                                    <span *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched" class="text-danger ps-1 fw-bold">La contraseña es obligatorio</span>
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example2">Repeat password</label>
-                                    <input type="password" id="form2Example2" class="form-control" />
+                                    <label class="form-label" for="vereficarClave">Repeat password</label>
+                                    <input type="password" id="vereficarClave" formControlName="vereficarClave" class="form-control" />
                                 </div>
                                 
                                 <!-- Submit button -->
-                                <button type="button" class="btn btn-block mb-4 w-100 "
-                                    style="background-color: #ED6D1B;">Sign in</button>
+                                <button type="submit" class="btn btn-block mb-4 w-100 " [disabled]="usuarioForm.invalid " style="background-color: #ED6D1B;">Sign in</button>
 
                                 <!-- Register buttons -->
                                 <div class="text-center">
@@ -388,10 +391,8 @@
             </div>
         </div>
         <div class="divBrowser col-3">
-            <div>
-                <a href="">
-                Username
-                </a>
+            <div *ngIf="listUsuario.length > 0">
+                <p *ngFor="let usuario of listUsuario"> {{usuario.username}} </p>
             </div>
         </div>
     </nav>
