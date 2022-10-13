@@ -165,9 +165,6 @@
                         <div class="col-6  align-items-center d-flex justify-content-center">
                             <ul class="nav d-flex justify-content-center align-items-center flex-column">
                                 <li class="nav-item">
-                                    <a class="textPoppies nav-link active" aria-current="page" routerLink=" ">HOME</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="textPoppies nav-link" routerLink="/nosotros">ABOUT US</a>
                                 </li>
                                 <li class="nav-item">
@@ -218,34 +215,31 @@
         <div class="div-Container col-6  align-items-center d-flex justify-content-center">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="textPoppies nav-link active" aria-current="page" routerLink=" ">HOME</a>
+                    <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/nosotros">ABOUT US</a>
+                    <a class="textPoppies nav-link" routerLink="/post">Publicaciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/post">PUBLICATIONS</a>
+                    <a class="textPoppies nav-link" routerLink="/dictionary">Diccionario</a>
                 </li>
                 <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/dictionary">DICTIONARY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/contact">CONTACT US</a>
+                    <a class="textPoppies nav-link" routerLink="/contact">Contacto</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="textPoppies nav-link dropdown-toggle" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        LOGIN BLOGGER
+                    <a class="textPoppies nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Ingresar
                     </a>
                     <ul class="dropdown-menu">
                         <li>
                             <button type="button" class="btn w-100 " data-bs-toggle="modal" data-bs-target="#ingresar">
-                                LOGIN
+                                Ingresar
                             </button>
                         </li>
                         <li>
                             <button type="button" class="btn w-100" data-bs-toggle="modal" data-bs-target="#registro">
-                                SIGN IN
+                                Registrarse
                             </button>
                         </li>
                         <li>
@@ -253,142 +247,12 @@
                         </li>
                         <li>
                             <button type="button" class="btn w-100" data-bs-toggle="modal" data-bs-target="#ingresar">
-                                I'M A BLOGGER
+                                Soy Blogger
                             </button>
                         </li>
                     </ul>
                 </li>
             </ul>
-            <div class="modal fade" id="ingresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content" style="width: 450px;">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresar</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <!-- Email input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example1">Correo electrónico</label>
-                                    <input type="email" id="form2Example1" class="form-control" />
-                                </div>
-
-                                <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example2">Contraseña</label>
-                                    <input type="password" id="form2Example2" class="form-control" />
-                                </div>
-
-                                <!-- 2 column grid layout for inline styling -->
-                                <div class="row mb-4">
-
-                                    <div class="col">
-                                        <!-- Simple link -->
-                                        <a href="#!" style="color: #ED6D1B;">¿Olvidé la contraseña?</a>
-                                    </div>
-                                </div>
-
-                                <!-- Submit button -->
-                                <button type="button" class="btn btn-block mb-4 w-100 "
-                                    style="background-color: #ED6D1B;">Ingresar</button>
-
-                                <!-- Register buttons -->
-                                <div class="text-center">
-                                    <p>¿No eres miembro? <a href="#!" style="color: #ED6D1B;">Registrate</a></p>
-                                    <p>o ingresa con:</p>
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-facebook"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-google"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-twitter"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-github"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content" style="width: 450px;">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
-                                <!-- Nombre Completo input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example1">Full name</label>
-                                    <input type="text" id="form2Example1" class="form-control" formControlName="fullName"/>
-                                    <span *ngIf="usuarioForm.get('fullName')?.hasError('required') && usuarioForm.get('fullName')?.touched" class="text-danger ps-1 fw-bold">El nombre completo es obligatorio</span>
-                                </div>
-
-                                <!-- Username input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example1">Username</label>
-                                    <input type="text" id="form2Example1" class="form-control" formControlName="username" />
-                                    <span *ngIf="usuarioForm.get('username')?.hasError('required') && usuarioForm.get('username')?.touched" class="text-danger ps-1 fw-bold">El username del usuario es obligatorio</span>
-                                </div>
-
-                                <!-- Email input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example1">Email</label>
-                                    <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
-                                    <span *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched" class="text-danger ps-1 fw-bold">El correo electrónico es obligatorio</span>
-                                </div>
-
-                                <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="password">Password</label>
-                                    <input type="password" id="password" class="form-control" formControlName="password" />
-                                    <span *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched" class="text-danger ps-1 fw-bold">La contraseña es obligatorio</span>
-                                </div>
-
-                                <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="vereficarClave">Repeat password</label>
-                                    <input type="password" id="vereficarClave" formControlName="vereficarClave" class="form-control" />
-                                </div>
-                                
-                                <!-- Submit button -->
-                                <button type="submit" class="btn btn-block mb-4 w-100 " [disabled]="usuarioForm.invalid " style="background-color: #ED6D1B;">Sign in</button>
-
-                                <!-- Register buttons -->
-                                <div class="text-center">
-                                    <p>Already a member? <a href="#!" style="color: #ED6D1B;">login</a></p>
-                                    <p>or register with:</p>
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-facebook"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-google"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-twitter"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                                        <i class="fa fa-github"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="divBrowser col-3">
             <div *ngIf="listUsuario.length > 0">
@@ -398,29 +262,31 @@
     </nav>
 </section>
 
-<section class="topVentas">
-    <div class="container">
+<section class="topVentas" style="background-image: url('assets/img/Fondo_Home_Street_2.jpeg')">
+    <div class="container" >
         <div class="d-flex">
             <span class="lineWhite"></span>
-            <p class="fw-bold text-danger px-4">Get big sale today</p>
+            <p class="fw-bold text-danger px-4"></p>
         </div>
-        <h1 class="textTopVentas text-white">TOP VENTAS</h1>
-        <button class="btn btn-danger my-5" type="button"> Shop Now</button>
+        <h1 class="textTopVentas text-white pb-4">LAS + TOP</h1>
         <div class="d-flex justify-content-between w-100">
             <div class=""> 
-                <h3 class="text-white">ZAPATO #1</h3>
-                <img src="https://via.placeholder.com/380x240" alt="">
-                <h4 class="text-white d-flex justify-content-end">$100.000</h4>
+                <h5 class="text-white p-4 mb-4" style="background-color: rgba(255, 255, 255, 0.179);">AIR FORCE 1 <br> React Sail Barely Volt</h5> 
+                <img src="assets/img/SNEAKER_TOP__0000_Sneakers_01.png" alt="">
+                <h3 class="text-black d-flex justify-content-end p-2 mt-3" style="background-color: rgb(255, 255, 255);">$ 1.166.000</h3>
+
             </div>
             <div class="" style="margin: 0 5%;">
-                <h3 class="text-white">ZAPATO #2</h3>
-                <img src="https://via.placeholder.com/380x240" alt="">
-                <h4 class="text-white d-flex justify-content-end">$100.000</h4>
+
+                <h5 class="text-white p-4 mb-4" style="background-color: rgba(255, 255, 255, 0.179);">AIRFORCE 1 <br> 07 Patched Up Los Angeles</h5>
+                <img src="assets/img/SNEAKER_TOP__0001_Sneakers_02.png" alt="">
+                <h3 class="text-black d-flex justify-content-end p-2 mt-3" style="background-color: rgb(255, 255, 255);" >$ 970.000</h3>
+
             </div>
             <div class=""> 
-                <h3 class="text-white">ZAPATO #3</h3>
-                <img src="https://via.placeholder.com/380x240" alt="">
-                <h4 class="text-white d-flex justify-content-end">$100.000</h4>
+                <h5 class="text-white p-4 mb-4" style="background-color: rgba(255, 255, 255, 0.179);">NIKE <br> Dunk Hight Retro</h5>
+                <img src="assets/img/SNEAKER_TOP__0002_Sneakers_03.png" alt="">
+                <h3 class="text-black d-flex justify-content-end p-2 mt-3" style="background-color: rgb(255, 255, 255);" >$ 819.000</h3>
             </div>
         </div>
     </div>
