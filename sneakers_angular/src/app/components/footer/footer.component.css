@@ -35,7 +35,7 @@ footer {
     position: fixed;
     width: 70px;
     height: 70px;
-    bottom: 30px;
+    bottom: 50px;
     right: 50px;
     background-color: #000000;
     color: rgb(255, 255, 255);
@@ -51,7 +51,7 @@ footer {
 }
 
 /* BOTON HOVER  */
-.btn {
+.btn1 {
     width: 122px;
     height: 45px;
     background: #000000;
@@ -64,7 +64,7 @@ footer {
     overflow: hidden;
 }
 
-.btn::before {
+.btn1::before {
     font-family:'FontAwesome';
     content: "\f001";
     font-size: 32px;
@@ -76,11 +76,11 @@ footer {
     transition: all .5s ease-in-out;
 }
 
-.btn:hover::before {
+.btn1:hover::before {
     top: -30px;
 }
 
-.btn::after {
+.btn1::after {
     content: 'Emisora';
     color: white;
     font-family: 'Century Gothic', sans-serif;
@@ -92,6 +92,6 @@ footer {
     transition: all .5s ease-in-out;
 }
 
-.btn:hover::after {
+.btn1:hover::after {
     top: 50%;
 }
