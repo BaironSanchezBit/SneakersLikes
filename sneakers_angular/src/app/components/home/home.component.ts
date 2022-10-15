@@ -14,8 +14,6 @@ import Swal from 'sweetalert2'
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('closeModal') closeModal: ElementRef
-
   usuarioForm: FormGroup;
 
   listUsuario: Usuario[] = [];
@@ -63,8 +61,6 @@ export class HomeComponent implements OnInit {
       }, error =>{
         console.log(error);
       })
-      this.closeModal.nativeElement.click();
     }
   }
-  
 }

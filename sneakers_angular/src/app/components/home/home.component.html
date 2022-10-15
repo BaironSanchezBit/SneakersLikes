@@ -267,7 +267,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form *ngFor="let usuario of listUsuario">
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Correo electrónico</label>
@@ -277,7 +277,7 @@
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example2">Contraseña</label>
-                                    <input type="password" id="form2Example2" class="form-control" />
+                                    <input type="password" id="form2Example2" class="form-control" formControlName="passwordLo" />
                                 </div>
 
                                 <!-- 2 column grid layout for inline styling -->
