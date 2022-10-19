@@ -37,13 +37,12 @@
 }
 
 .sectionSus {
-    height: 50vh;
+    height: 70vh;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("https://img.freepik.com/free-photo/close-up-hands-with-pen-writing-notebook_23-2147601493.jpg?w=2000&t=st=1664992001~exp=1664992601~hmac=20de86c8c49d0352f326be7b5bb41100d0b898b06dc42e6560348539a4e4bdd1");
     background-size: 100%;
     background-repeat: no-repeat;
 }

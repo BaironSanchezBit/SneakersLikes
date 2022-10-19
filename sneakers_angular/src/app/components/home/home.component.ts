@@ -5,6 +5,8 @@ import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import Swal from 'sweetalert2';
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -27,18 +29,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obtenerUsername();
   }
 
-  obtenerUsername(){
-    this._usuarioService.getUsuario().subscribe( data => {
-      
-      this.listUsuario = data;
-      console.log( this.listUsuario);
-    }, error => {
-      console.log(error);
-    })
-  }
 
   crearUsuario() {
 
@@ -58,14 +50,17 @@ export class HomeComponent implements OnInit {
         email: this.usuarioForm.get('email')?.value
       }
 
-      Swal.fire({
-        title: 'Exito',
-        text: 'El registro se realizó correctamente',
-        icon: 'success',
-        confirmButtonText: 'Vale'
+      this._usuarioService.postUsuario(USUARIO).subscribe(data => {
+        this.router.navigate(['/']);
+        Swal.fire({
+          title: 'Exito',
+          text: 'El registro se realizó correctamente',
+          icon: 'success',
+          confirmButtonText: 'Vale'
+        })
+      }, error =>{
+        console.log(error);
       })
-      this.router.navigate(['/']);
     }
   }
-
 }
