@@ -10,31 +10,31 @@
 </section>
 
 <div class="container mt-5">
+    <div class="w-100 d-flex flex-column">
+        <div class="col-12 d-flex  justify-content-center align-items-center my-4">
+            <p class="h1">Tus publicaciones</p>
+
+        </div>
+    </div>
     <div class="row">
         <div class=" col-1 "></div>
-
         <div class="col-7 pe-5 mb-5" style="text-align: justify; font-family: 'Lato', sans-serif;">
-
-            <div class="conteiner">
-
+            <form [formGroup]="postForm" (ngSubmit)="crearPost()" class="conteiner">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Título del Artículo:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <input type="text" formControlName="tittleArticle" class="form-control" id="exampleFormControlInput1">
+                    <span *ngIf="postForm.get('tittleArticle')?.hasError('required') && postForm.get('tittleArticle')?.touched" class="text-danger ps-1"> El titulo de la publicacion es necesaria</span>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Publicación:</label>
-                    <textarea class="form-control" style="height: 400px;" id="exampleFormControlTextarea1"
-                        rows="3"></textarea>
+                    <textarea class="form-control" formControlName="post" style="height: 400px;" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <span *ngIf="postForm.get('post')?.hasError('required') && postForm.get('post')?.touched" class="text-danger ps-1"> El contenido de la publicacion es necesaria</span>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Agrerar foto publicación:</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" formControlName="img" type="file" id="formFile">
+                    <span *ngIf="postForm.get('img')?.hasError('required') && postForm.get('img')?.touched" class="text-danger ps-1"> La imagen de la publicacion es necesaria</span>
                 </div>
-
-
-
-
-                <button type="button" class="btn btn-warning">Publicar artículo</button>
-
-            </div>
+                <button type="submit"  class="btn btn-warning" [disabled]="postForm.invalid">Publicar artículo</button>
+            </form>
         </div>

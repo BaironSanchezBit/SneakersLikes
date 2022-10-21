@@ -1,6 +1,7 @@
 footer {
     height: 120px;
-    background-color: #ED6D1B;
+    background: rgb(190,49,27);
+background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
 }
 
 .faIcon {

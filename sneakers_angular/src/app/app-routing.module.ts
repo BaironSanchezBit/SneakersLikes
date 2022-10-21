@@ -14,6 +14,8 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'post', component: PostComponent},
   {path: 'newpost', component: NewpostComponent},
+  {path: 'crear-post', component: NewpostComponent},
+  {path: 'update-post/:id/:id', component: NewpostComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
