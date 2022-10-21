@@ -29,7 +29,7 @@
     background-color: #f4f4f4;
 }
 .textPoppies{
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Poppies', sans-serif;
     color: #2b2b2b;
 }
 .navAllHambur{
@@ -64,10 +64,27 @@
     border-top: 4px solid #eee;
     padding-right: 10%;
 }
-
-@media (max-width: 1140px){
-    .imgLogo{
-        width: 380px;
+.sectionNoti{
+    padding: 0 10%;
+}
+.divNoti{
+    height: 500px;
+    overflow-y: scroll;
+    width: 400px;
+}
+@media (max-width: 1400px){
+    .sectionNoti{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .divAllNot{
+        margin: 5% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
 @media (max-width: 1140px){
@@ -76,5 +93,8 @@
     }
     .navAll{
         justify-content: space-between;
+    }
+    .imgLogo{
+        width: 380px;
     }
 }
