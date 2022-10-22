@@ -85,7 +85,7 @@
 }
 .espacio-imagen{
     height: 200px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 @media (max-width: 540px) {
     .textTopVentas{

@@ -63,4 +63,13 @@ export class HomeComponent implements OnInit {
       })
     }
   }
+  
+  abrirAlerta(){
+    Swal.fire({
+      icon: 'info',
+      title: 'Discúlpanos',
+      text: '¡Por ahora no tenemos redes Sociales!',
+      confirmButtonColor: "#E9560D"
+    })
+  }
 }
