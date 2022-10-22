@@ -134,3 +134,14 @@
         width: 600px;
     }
 }
+@media (max-width: 1140px){
+    .div-Container{
+        display: none !important;
+    }
+    .navAll{
+        justify-content: space-between;
+    }
+    .imgLogo{
+        width: 380px;
+    }
+}
