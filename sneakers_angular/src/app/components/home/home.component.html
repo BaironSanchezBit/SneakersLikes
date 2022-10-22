@@ -129,17 +129,17 @@
         <div class="divLogo">
             <a href=""><img class="imgLogo" src="assets/img/logo.png" style="width: 380px;" alt=""></a>
         </div>
-        <div class="divWeb">
-            <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/twitter.ico"  alt=""></button>
-            <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/instagram.ico" alt=""></button>
-            <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/facebook.ico" alt=""></button>
+        <div class="ContainerLogo">
+            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img src="assets/img/twitter.ico"  alt=""></button>
+            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img src="assets/img/instagram.ico" alt=""></button>
+            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img src="assets/img/facebook.ico" alt=""></button>
         </div>
     </div>
     <nav class="navAll d-flex">
     
         <!-- MENU HAMBURGUESA DEL HOME ------------------------------------->
-    <div class="menuHamb col-1">
-            <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+    <div class="menuHamb col-3">
+            <button class="btn d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
                 aria-controls="offcanvasWithBothOptions"><i class="fa fa-bars" style="font-size: 28px;" aria-hidden="true"></i>
             </button>
 
@@ -163,7 +163,7 @@
                 </div>
                 <div class="offcanvas-body pt-0 px-0">
                     <nav class="navAllHambur d-flex">
-                        <div class="col-6  align-items-center d-flex justify-content-center">
+                        <div class="col-6 align-items-center d-flex justify-content-center">
                             <ul class="nav d-flex justify-content-center align-items-center flex-column">
                                 <li class="nav-item">
                                     <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
@@ -216,7 +216,7 @@
         <!-- MENU HAMBURGUESA DEL HOME ------------------------------------->
 
         <!-- NAVBAR DEL HOME SOLAMENTE ------------------------------------->
-        <div class="div-Container col-6  align-items-center d-flex justify-content-center">
+        <div class="div-Container col-6 align-items-center d-flex justify-content-center">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
