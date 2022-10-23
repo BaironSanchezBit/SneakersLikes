@@ -36,19 +36,23 @@
                     <div class="text-center">
                         <p>¿No eres miembro? <a href="#!" style="color: #ED6D1B;">Registrate</a></p>
                         <p>o ingresa con:</p>
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-facebook"></i>
                         </button>
 
-                        <button type="button"(click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-google"></i>
                         </button>
 
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-twitter"></i>
                         </button>
 
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-github"></i>
                         </button>
                     </div>
@@ -101,25 +105,30 @@
                     </div>
                     
                     <!-- Submit button -->
-                    <button #closeModal type="submit" class="btn btn-block mb-4 w-100 " [disabled]="usuarioForm.invalid " style="background-color: #ED6D1B;">Sign in</button>
+                    <button type="button" class="btn btn-block mb-4 w-100 "
+                        style="background-color: #ED6D1B;">Ingresar</button>
 
                     <!-- Register buttons -->
                     <div class="text-center">
-                        <p>Already a member? <a href="#!" style="color: #ED6D1B;">login</a></p>
-                        <p>or register with:</p>
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <p>¿Ya eres miembro? <a href="#!" style="color: #ED6D1B;">Ingresar</a></p>
+                        <p>o ingresa con:</p>
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-facebook"></i>
                         </button>
 
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-google"></i>
                         </button>
 
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-twitter"></i>
                         </button>
 
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
+                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1"
+                            style="color: #ED6D1B;">
                             <i class="fa fa-github"></i>
                         </button>
                     </div>
@@ -134,17 +143,21 @@
             <a href=""><img class="imgLogo" src="assets/img/logo.png" style="width: 380px;" alt=""></a>
         </div>
         <div class="ContainerLogo">
-            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img src="assets/img/twitter.ico"  alt=""></button>
-            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img src="assets/img/instagram.ico" alt=""></button>
-            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img src="assets/img/facebook.ico" alt=""></button>
+            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img
+                    src="assets/img/twitter.ico" alt=""></button>
+            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img
+                    src="assets/img/instagram.ico" alt=""></button>
+            <button type="button" class="btn d-none d-md-block" (click)="abrirAlerta()"> <img
+                    src="assets/img/facebook.ico" alt=""></button>
         </div>
     </div>
     <nav class="navAll d-flex">
-    
+
         <!-- MENU HAMBURGUESA DEL HOME ------------------------------------->
-    <div class="menuHamb col-3">
-            <button class="btn d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-                aria-controls="offcanvasWithBothOptions"><i class="fa fa-bars" style="font-size: 28px;" aria-hidden="true"></i>
+        <div class="menuHamb col-3">
+            <button class="btn d-xl-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                    class="fa fa-bars" style="font-size: 28px;" aria-hidden="true"></i>
             </button>
 
             <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
@@ -155,11 +168,15 @@
                     </div>
                     <div class="ContainerLogo">
                         <div class="divLogoHamb">
-                            <a href=""><img class="imgLogoHamb"  style="width: 210px;" src="assets/img/logo.png" alt=""></a>
+                            <a href=""><img class="imgLogoHamb" style="width: 210px;" src="assets/img/logo.png"
+                                    alt=""></a>
                             <div class="divWeb">
-                                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/twitter.ico"  alt=""></button>
-                                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/instagram.ico" alt=""></button>
-                                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/facebook.ico" alt=""></button>
+                                <button type="button" class="btn" (click)="abrirAlerta()"> <img
+                                        src="assets/img/twitter.ico" alt=""></button>
+                                <button type="button" class="btn" (click)="abrirAlerta()"> <img
+                                        src="assets/img/instagram.ico" alt=""></button>
+                                <button type="button" class="btn" (click)="abrirAlerta()"> <img
+                                        src="assets/img/facebook.ico" alt=""></button>
                             </div>
                         </div>
                     </div>
@@ -285,7 +302,8 @@
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example2">Contraseña</label>
-                                    <input type="password" id="form2Example2" class="form-control" formControlName="passwordLo" />
+                                    <input type="password" id="form2Example2" class="form-control"
+                                        formControlName="passwordLo" />
                                 </div>
 
                                 <!-- 2 column grid layout for inline styling -->
@@ -338,39 +356,54 @@
                                 <!-- Nombre Completo input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Full name</label>
-                                    <input type="text" id="form2Example1" class="form-control" formControlName="fullName"/>
-                                    <span *ngIf="usuarioForm.get('fullName')?.hasError('required') && usuarioForm.get('fullName')?.touched" class="text-danger ps-1 fw-bold">El nombre completo es obligatorio</span>
+                                    <input type="text" id="form2Example1" class="form-control"
+                                        formControlName="fullName" />
+                                    <span
+                                        *ngIf="usuarioForm.get('fullName')?.hasError('required') && usuarioForm.get('fullName')?.touched"
+                                        class="text-danger ps-1 fw-bold">El nombre completo es obligatorio</span>
                                 </div>
 
                                 <!-- Username input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Username</label>
-                                    <input type="text" id="form2Example1" class="form-control" formControlName="username" />
-                                    <span *ngIf="usuarioForm.get('username')?.hasError('required') && usuarioForm.get('username')?.touched" class="text-danger ps-1 fw-bold">El username del usuario es obligatorio</span>
+                                    <input type="text" id="form2Example1" class="form-control"
+                                        formControlName="username" />
+                                    <span
+                                        *ngIf="usuarioForm.get('username')?.hasError('required') && usuarioForm.get('username')?.touched"
+                                        class="text-danger ps-1 fw-bold">El username del usuario es obligatorio</span>
                                 </div>
 
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form2Example1">Email</label>
-                                    <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
-                                    <span *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched" class="text-danger ps-1 fw-bold">El correo electrónico es obligatorio</span>
+                                    <input type="email" id="form2Example1" class="form-control"
+                                        formControlName="email" />
+                                    <span
+                                        *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched"
+                                        class="text-danger ps-1 fw-bold">El correo electrónico es obligatorio</span>
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="password">Password</label>
-                                    <input type="password" id="password" class="form-control" formControlName="password" />
-                                    <span *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched" class="text-danger ps-1 fw-bold">La contraseña es obligatorio</span>
+                                    <input type="password" id="password" class="form-control"
+                                        formControlName="password" />
+                                    <span
+                                        *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched"
+                                        class="text-danger ps-1 fw-bold">La contraseña es obligatorio</span>
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="vereficarClave">Repeat password</label>
-                                    <input type="password" id="vereficarClave" formControlName="vereficarClave" class="form-control" />
+                                    <input type="password" id="vereficarClave" formControlName="vereficarClave"
+                                        class="form-control" />
                                 </div>
-                                
+
                                 <!-- Submit button -->
-                                <button #closeModal type="submit" class="btn btn-block mb-4 w-100 " [disabled]="usuarioForm.invalid " style="background-color: #ED6D1B;">Sign in</button>
+                                <button #closeModal type="submit" class="btn btn-block mb-4 w-100 "
+                                    [disabled]="usuarioForm.invalid " style="background-color: #ED6D1B;">Sign
+                                    in</button>
 
                                 <!-- Register buttons -->
                                 <div class="text-center">
@@ -406,40 +439,166 @@
     </nav>
 </section>
 
-<section class="topVentas col-12" style="background-image: url('assets/img/Fondo_Home_Street_2.jpeg')">
-    <div class="container" >
-        <div class="container d-flex">
+<section class="container p-4" style="background-image:url('assets/img/Fondo_Home_Street_2.jpeg')">
+    <div class="container">
+        <div class="container d-flex p-2">
             <span class="lineWhite"></span>
-            <p class="fw-bold text-danger px-4"></p>
         </div>
-        <h1 class="textTopVentas text-white pb-4">LAS + TOP</h1>
-        <div class="top d-flex justify-content-between w-100">
-            <div class="notFirst"> 
-                <h5 class=" text-white p-4 mb-4" style="background-color: rgba(255, 255, 255, 0.179);">AIR FORCE 1 <br> React Sail Barely Volt</h5> 
-                <img src="assets/img/SNEAKER_TOP__0000_Sneakers_01.png" alt="">
-                <h3 class="text-black d-flex justify-content-end p-2 mt-3" style="background-color: rgb(255, 255, 255);">$ 1.166.000</h3>
-
+        <h1 class="textTopVentas text-white pb-4">LAS 10 + TOP</h1>
+        <div class="container d-flex justify-content-center">
+            <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel" style="width: 700px;">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/assets/img/SNEAKER_TOP__0000_Sneakers_01.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">Air Fotce 1
+                                React 'SAIL BARELY VOLT'</h5>
+                            <h3 class="text-bg-dark">$1`166.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0001_Sneakers_02.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">Air Force 1 '07
+                                'PATCHED UP - LOS ANGELES'</h5>
+                            <h3 class="text-bg-dark">$970.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0002_Sneakers_03.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">Dunk High Retro
+                            </h5>
+                            <h3 class="text-bg-dark">$819.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0003_Sneakers_04.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">ZoomX Vaporfly
+                                Next 2 Hyper Violet Flash Crimson</h5>
+                            <h3 class="text-bg-dark">$1.064.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0004_Sneakers_05.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">Air Max 90
+                                Terrascape Sail Sea Glass</h5>
+                            <h3 class="text-bg-dark">$742.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0005_Sneakers_06.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">Blazer Mid
+                                Cleveland Rocks</h5>
+                            <h3 class="text-bg-dark">$910.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0006_Sneakers_07.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">LeBron 18 Low
+                                Wile E. vs Roadrunner Space Jam</h5>
+                            <h3 class="text-bg-dark">$999.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0007_Sneakers_08.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">Air Force 1 Low
+                                Shadow</h5>
+                            <h3 class="text-bg-dark">$815.000</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/SNEAKER_TOP__0008_Sneakers_09.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class=" text-dark" style="background-color: rgba(221, 221, 221, 0.805);">Air Force 1 Mid
+                                Berlin</h5>
+                            <h3 class="text-bg-dark">$895.000</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
-            <div class="notSecond" style="margin: 0 5%;">
 
-                <h5 class=" text-white p-4 mb-4" style="background-color: rgba(255, 255, 255, 0.179);">AIRFORCE 1 <br> 07 Patched Up Los Angeles</h5>
-                <img src="assets/img/SNEAKER_TOP__0001_Sneakers_02.png" alt="">
-                <h3 class="text-black d-flex justify-content-end p-2 mt-3" style="background-color: rgb(255, 255, 255);" >$ 970.000</h3>
 
-            </div>
-            <div class="notThird"> 
-                <h5 class=" text-white p-4 mb-4" style="background-color: rgba(255, 255, 255, 0.179);">NIKE <br> Dunk Hight Retro</h5>
-                <img src="assets/img/SNEAKER_TOP__0002_Sneakers_03.png" alt="">
-                <h3 class="text-black d-flex justify-content-end p-2 mt-3" style="background-color: rgb(255, 255, 255);" >$ 819.000</h3>
-            </div>
+
+
         </div>
     </div>
 </section>
 
-<section class="sectionNoti py-5 d-flex">
-    <img class="imgNotFirst" width="800px" height="500px" src="https://via.placeholder.com/800x500" alt="">
-    <div class="divAllNot offset-1 col-4 ">
-        <div><p class="h5 fw-bold">Más leído</p></div>
+
+<section>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-12 p-3 col-sm-12 col-md-8 col-lg-8">
+                <img class="container w-100" src="/assets/img/Noti_Banner_800px_04.png" alt="">
+                <div>
+                    <h4 class=" d-flex d-grid justify-content-center align-content-center mt-2">Puma x Coca-Cola: Una
+                        Colaboración Infinitamente Refrescante</h4>
+                </div>
+            </div>
+
+            <div class="col-12 p-3 col-sm-12 col-md-12 col-lg-4">
+                <div>
+                    <div>
+                        <div class="d-flex justify-content-center align-items-center p-2">
+                            <img style="width:100px;" src="/assets/img/Noti_Banner_800px_04.png" alt="">
+                            <h6 class="ms-3">Puma x Coca-Cola: Una Colaboración Infinitamente Refrescante</h6>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center p-2">
+                            <img style="width:100px;" src="/assets/img/Noti_Banner_800px_01.png" alt="">
+                            <h6 class="ms-3">Sneaker Society espera acoger a 10 000 visitantes en su próxima edición en Colombia</h6>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center p-2">
+                            <img style="width:100px;" src="/assets/img/Noti_Banner_800px_04.png" alt="">
+                            <h6 class="ms-3">Adidas SuperStar X RUN DMC</h6>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center p-2">
+                            <img style="width:100px;" src="/assets/img/Noti_Banner_800px_03.png" alt="">
+                            <h6 class="ms-3">rTres maneras de personalizar tus sneakers</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+<!-- <section class="sectionNoti mt-5 mb-5 d-flex">
+    <img class="container" width="800px" height="500px" src="https://via.placeholder.com/800x500" alt="">
+    <div class="container col-1 col-sm-12 col-md-auto mt-5 mb-5" style="background-color: red;">
+        <div>
+            <p class="h5 fw-bold">Más leído</p>
+        </div>
         <div class=" divNoti d-flex justify-content-around flex-column">
             <div class="h-100 p-3">
                 <div class="d-flex justify-content-center align-items-center">
@@ -476,7 +635,9 @@
                 </div>
             </div>
         </div>
-        <div><p class="h5 fw-bold">Más visto</p></div>
+        <div>
+            <p class="h5 fw-bold">Más visto</p>
+        </div>
 
     </div>
-</section>
+</section> -->
