@@ -14,55 +14,12 @@ import Swal from 'sweetalert2';
 })
 export class HomeComponent implements OnInit {
 
-  usuarioForm: FormGroup;
-
-  listUsuario: Usuario[] = [];
-
-  constructor(private fb: FormBuilder, private router: Router, private _usuarioService: UsuarioService) {
-    this.usuarioForm = this.fb.group({
-      fullName: ['', [Validators.required]],
-      username: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-      vereficarClave: ['', [Validators.required]]
-    })
+  constructor() {
   }
 
   ngOnInit(): void {
   }
 
-
-  crearUsuario() {
-
-    if (this.usuarioForm.get('password')?.value != this.usuarioForm.get('vereficarClave')?.value) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Las contraseñas no coinciden',
-      })
-
-    } else {
-
-      const USUARIO: Usuario = {
-        fullName: this.usuarioForm.get('fullName')?.value,
-        username: this.usuarioForm.get('username')?.value,
-        password: this.usuarioForm.get('password')?.value,
-        email: this.usuarioForm.get('email')?.value
-      }
-
-      this._usuarioService.postUsuario(USUARIO).subscribe(data => {
-        this.router.navigate(['/']);
-        Swal.fire({
-          title: 'Exito',
-          text: 'El registro se realizó correctamente',
-          icon: 'success',
-          confirmButtonText: 'Vale'
-        })
-      }, error =>{
-        console.log(error);
-      })
-    }
-  }
   
   abrirAlerta(){
     Swal.fire({

@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PostComponent } from './components/post/post.component';
 import { NewpostComponent } from './components/newpost/newpost.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: 'newpost', component: NewpostComponent},
   {path: 'crear-post', component: NewpostComponent},
   {path: 'update-post/:id/:id', component: NewpostComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

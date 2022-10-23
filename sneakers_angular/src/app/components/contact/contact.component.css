@@ -37,8 +37,8 @@
 }
 
 .sectionSus {
-    height: 70vh;
-    background-color: black;
+    height: 100vh;
+    background-color: rgb(5, 4, 4);   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@
     }
 
     .imgLogo {
-        width: 350px;
+        width: 280px;
     }
 
     .inputSus {
@@ -76,7 +76,7 @@
     }
 
     .lorem {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 }
 

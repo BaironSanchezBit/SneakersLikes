@@ -1,414 +1,148 @@
 <section>
+    <section class="sectionNav">
+        <nav class="navAll d-flex">
 
-    <!-- MODALES PARA MENU HAMBURGUESA  -->
-    <div class="modal fade" id="ingresarHamb" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="width: 450px;">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ingresar</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Correo electrónico:</label>
-                        <input type="email" id="form2Example1" class="form-control" />
-                    </div>
+            <!-- MENU HAMBURGUESA navbar------------------------------------->
+            <div class="menuHamb col-1">
+                <button class="btn d-xl-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="fa fa-bars" style="font-size: 28px;" aria-hidden="true"></i>
+                </button>
 
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example2">Contraseña:</label>
-                        <input type="password" id="form2Example2" class="form-control" />
-                    </div>
-
-                    <!-- 2 column grid layout for inline styling -->
-                    <div class="row mb-4">
-
-                        <div class="col">
-                            <!-- Simple link -->
-                            <a href="#!" style="color: #ED6D1B;">¿Olvidé la contraseña?</a>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header divLogoHamb">
+                        <div class="w-100 d-flex justify-content-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
                         </div>
-                    </div>
-
-                    <!-- Submit button -->
-                    <button type="button" class="btn btn-block mb-4 w-100 "
-                        style="background-color: #ED6D1B;">Ingresar</button>
-
-                    <!-- Register buttons -->
-                    <div class="text-center">
-                        <p>¿No eres miembro? <a href="#!" style="color: #ED6D1B;">Registrate</a></p>
-                        <p>o ingresa con:</p>
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-facebook"></i>
-                        </button>
-
-                        <button type="button"(click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-google"></i>
-                        </button>
-
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-twitter"></i>
-                        </button>
-
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-github"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="registroHamb" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="width: 450px;">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
-                    <!-- Nombre Completo input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Full name</label>
-                        <input type="text" id="form2Example1" class="form-control" formControlName="fullName"/>
-                        <span *ngIf="usuarioForm.get('fullName')?.hasError('required') && usuarioForm.get('fullName')?.touched" class="text-danger ps-1 fw-bold">El nombre completo es obligatorio</span>
-                    </div>
-
-                    <!-- Username input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Username</label>
-                        <input type="text" id="form2Example1" class="form-control" formControlName="username" />
-                        <span *ngIf="usuarioForm.get('username')?.hasError('required') && usuarioForm.get('username')?.touched" class="text-danger ps-1 fw-bold">El username del usuario es obligatorio</span>
-                    </div>
-
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Email</label>
-                        <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
-                        <span *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched" class="text-danger ps-1 fw-bold">El correo electrónico es obligatorio</span>
-                    </div>
-
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="password">Password</label>
-                        <input type="password" id="password" class="form-control" formControlName="password" />
-                        <span *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched" class="text-danger ps-1 fw-bold">La contraseña es obligatorio</span>
-                    </div>
-
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="vereficarClave">Repeat password</label>
-                        <input type="password" id="vereficarClave" formControlName="vereficarClave" class="form-control" />
-                    </div>
-                    
-                    <!-- Submit button -->
-                    <button #closeModal type="submit" class="btn btn-block mb-4 w-100 " [disabled]="usuarioForm.invalid " style="background-color: #ED6D1B;">Sign in</button>
-
-                    <!-- Register buttons -->
-                    <div class="text-center">
-                        <p>Already a member? <a href="#!" style="color: #ED6D1B;">login</a></p>
-                        <p>or register with:</p>
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-facebook"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-google"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-twitter"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-github"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="sectionNav">
-    <nav class="navAll d-flex">
-
-        <!-- MENU HAMBURGUESA navbar------------------------------------->
-        <div class="menuHamb col-1">
-            <button class="btn d-xl-none ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-                aria-controls="offcanvasWithBothOptions"><i class="fa fa-bars"  style="font-size: 28px;" aria-hidden="true"></i>
-            </button>
-
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-                aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header divLogoHamb">
-                    <div class="w-100 d-flex justify-content-end">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="ContainerLogo">
-                        <div class="divLogoHamb">
-                            <a href=""><img class="imgLogoHamb"  style="width: 210px;" src="assets/img/logo.png" alt=""></a>
-                            <div class="divWeb">
-                                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/twitter.ico"  alt=""></button>
-                                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/instagram.ico" alt=""></button>
-                                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/facebook.ico" alt=""></button>
+                        <div class="ContainerLogo">
+                            <div class="divLogoHamb">
+                                <a href=""><img class="imgLogoHamb" style="width: 210px;" src="assets/img/logo.png"
+                                        alt=""></a>
+                                <div class="divWeb">
+                                    <button type="button" class="btn" (click)="abrirAlerta()"> <img
+                                            src="assets/img/twitter.ico" alt=""></button>
+                                    <button type="button" class="btn" (click)="abrirAlerta()"> <img
+                                            src="assets/img/instagram.ico" alt=""></button>
+                                    <button type="button" class="btn" (click)="abrirAlerta()"> <img
+                                            src="assets/img/facebook.ico" alt=""></button>
+                                </div>
                             </div>
                         </div>
+
                     </div>
+                    <div class="offcanvas-body pt-0 px-0">
+                        <nav class="navAllHambur d-flex">
+                            <div class="col-6  align-items-center d-flex justify-content-center">
+                                <ul class="nav d-flex justify-content-center align-items-center flex-column">
+                                    <li class="nav-item">
+                                        <a class="textPoppies nav-link" routerLink=" ">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="textPoppies nav-link" routerLink="/post">Publicaciones</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="textPoppies nav-link" routerLink="/dictionary">Diccionario</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="textPoppies nav-link" routerLink="/contact">Contacto</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="textPoppies nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Ingresar
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="text-decoration-none w-100 d-flex justify-content-center align-items-center py-1 text-black" routerLink="/login">Ingresar</a>
+                                            </li>
+                                            <li>
+                                                <a class="text-decoration-none w-100 d-flex justify-content-center align-items-center py-1 text-black" routerLink="/register">Registrarse</a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn w-100" data-bs-toggle="modal"
+                                                    data-bs-target="#ingresarHamb">
+                                                    Soy Blogger
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
 
-                </div>
-                <div class="offcanvas-body pt-0 px-0">
-                    <nav class="navAllHambur d-flex">
-                        <div class="col-6  align-items-center d-flex justify-content-center">
-                            <ul class="nav d-flex justify-content-center align-items-center flex-column">
-                                <li class="nav-item">
-                                    <a class="textPoppies nav-link" href="">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="textPoppies nav-link" routerLink="/post">Publicaciones</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="textPoppies nav-link" routerLink="/dictionary">Diccionario</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="textPoppies nav-link" routerLink="/contact">Contacto</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="textPoppies nav-link dropdown-toggle" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Ingresar
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <button type="button" class="btn w-100 " data-bs-toggle="modal"
-                                                data-bs-target="#ingresarHamb">
-                                                Ingresar
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn w-100" data-bs-toggle="modal"
-                                                data-bs-target="#registroHamb">
-                                                Registrarse
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn w-100" data-bs-toggle="modal"
-                                                data-bs-target="#ingresarHamb">
-                                                Soy Blogger
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </nav>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- MENU HAMBURGUESA navbar------------------------------------->
+            <!-- MENU HAMBURGUESA navbar------------------------------------->
 
-        <!-- NAVBAR ------------------------------------->
-        <!-- NAVBAR LOGO------------------------------------->
-        <div class="menuHamb col-2">
-            <a routerLink=" ">
-                <img class="imgLogo" src="assets/img/logo.png" width="210px" height="72px" alt="">
-            </a>
-        </div>
-        <!-- NAVBAR ------------------------------------->
-        <div class="div-Container col-8 align-items-center d-flex justify-content-center">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="textPoppies nav-link" href="">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/post">Publicaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/dictionary">Diccionario</a>
-                </li>
-                <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/contact">Contacto</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="textPoppies nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Ingresar
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <button type="button" class="btn w-100 " data-bs-toggle="modal" data-bs-target="#ingresar">
-                                Ingresar
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn w-100" data-bs-toggle="modal" data-bs-target="#registro">
-                                Registrarse
-                            </button>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li>
-                            <button type="button" class="btn w-100" data-bs-toggle="modal" data-bs-target="#ingresar">
-                                Soy Blogger
-                            </button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="divBrowser col-1">
-            <div>
-                <a href="" style="font-size:13px ;">
-                    Username
+            <!-- NAVBAR ------------------------------------->
+            <!-- NAVBAR LOGO------------------------------------->
+            <div class="menuHamb col-2">
+                <a routerLink=" ">
+                    <img class="imgLogo" src="assets/img/logo.png" width="210px" height="72px" alt="">
                 </a>
             </div>
-        </div>
-        <!-- NAVBAR ------------------------------------->
-    </nav>
-</section>
-
-<div class="modal fade" id="ingresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="width: 450px;">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ingresar</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- NAVBAR ------------------------------------->
+            <div class="div-Container col-6 align-items-center d-flex justify-content-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="textPoppies nav-link" routerLink=" ">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="textPoppies nav-link" routerLink="/post">Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="textPoppies nav-link" routerLink="/dictionary">Diccionario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="textPoppies nav-link" routerLink="/contact">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="textPoppies nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Ingresar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="text-decoration-none w-100 d-flex justify-content-center align-items-center py-1 text-black" routerLink="/login">Ingresar</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none w-100 d-flex justify-content-center align-items-center py-1 text-black" routerLink="/register">Registrarse</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <button type="button" class="btn w-100" data-bs-toggle="modal"
+                                    data-bs-target="#ingresar">
+                                    Soy Blogger
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <div class="modal-body">
-                <form>
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Correo electrónico:</label>
-                        <input type="email" id="form2Example1" class="form-control" />
-                    </div>
-
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example2">Contraseña:</label>
-                        <input type="password" id="form2Example2" class="form-control" />
-                    </div>
-
-                    <!-- 2 column grid layout for inline styling -->
-                    <div class="row mb-4">
-
-                        <div class="col">
-                            <!-- Simple link -->
-                            <a href="#!" style="color: #ED6D1B;">¿Olvidé la contraseña?</a>
-                        </div>
-                    </div>
-
-                    <!-- Submit button -->
-                    <button type="button" class="btn btn-block mb-4 w-100 "
-                        style="background-color: #ED6D1B;">Ingresar</button>
-
-                    <!-- Register buttons -->
-                    <div class="text-center">
-                        <p>¿No eres miembro? <a href="#!" style="color: #ED6D1B;">Regístrate</a></p>
-                        <p>o ingresa con:</p>
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-facebook"></i>
-                        </button>
-
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-google"></i>
-                        </button>
-
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-twitter"></i>
-                        </button>
-
-                        <button type="button" (click)="abrirAlerta()" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-github"></i>
-                        </button>
-                    </div>
-                </form>
+            <div class="divBrowser col-3">
+                <div>
+                    <a href="" style="font-size:13px ;">
+                        Username
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="width: 450px;">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
-                    <!-- Nombre Completo input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Full name</label>
-                        <input type="text" id="form2Example1" class="form-control" formControlName="fullName"/>
-                        <span *ngIf="usuarioForm.get('fullName')?.hasError('required') && usuarioForm.get('fullName')?.touched" class="text-danger ps-1 fw-bold">El nombre completo es obligatorio</span>
-                    </div>
+            <!-- NAVBAR ------------------------------------->
+        </nav>
+    </section>
 
-                    <!-- Username input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Username</label>
-                        <input type="text" id="form2Example1" class="form-control" formControlName="username" />
-                        <span *ngIf="usuarioForm.get('username')?.hasError('required') && usuarioForm.get('username')?.touched" class="text-danger ps-1 fw-bold">El username del usuario es obligatorio</span>
-                    </div>
 
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example1">Email</label>
-                        <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
-                        <span *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched" class="text-danger ps-1 fw-bold">El correo electrónico es obligatorio</span>
-                    </div>
-
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="password">Password</label>
-                        <input type="password" id="password" class="form-control" formControlName="password" />
-                        <span *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched" class="text-danger ps-1 fw-bold">La contraseña es obligatorio</span>
-                    </div>
-
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="vereficarClave">Repeat password</label>
-                        <input type="password" id="vereficarClave" formControlName="vereficarClave" class="form-control" />
-                    </div>
-                    
-                    <!-- Submit button -->
-                    <button #closeModal type="submit" class="btn btn-block mb-4 w-100 " [disabled]="usuarioForm.invalid " style="background-color: #ED6D1B;">Sign in</button>
-
-                    <!-- Register buttons -->
-                    <div class="text-center">
-                        <p>Already a member? <a href="#!" style="color: #ED6D1B;">login</a></p>
-                        <p>or register with:</p>
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-facebook"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-google"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-twitter"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-floating mx-1" style="color: #ED6D1B;">
-                            <i class="fa fa-github"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 </section>
