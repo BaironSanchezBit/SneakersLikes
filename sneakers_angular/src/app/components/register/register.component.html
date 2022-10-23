@@ -1,0 +1,71 @@
+<section style="height: 90vh; background-color: #eee;">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Regístrate</p>
+
+                                <form [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()" class="mx-1 mx-md-4">
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fa fa-user fs-4 pb-4 pe-3" aria-hidden="true"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" id="form3Example1c" formControlName="name" class="form-control" />
+                                            <label class="form-label" for="form3Example1c">Nombre</label>
+                                            <span *ngIf="usuarioForm.get('name')?.hasError('required') && usuarioForm.get('name')?.touched" class="text-danger ps-1 fw-bold">El nombre es obligatorio</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fa fa-envelope fs-5 pb-4 pe-3" aria-hidden="true"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="email" id="form3Example3c"  formControlName="email"  class="form-control" />
+                                            <label class="form-label" for="form3Example3c">Correo electrónico</label>
+                                            <span *ngIf="usuarioForm.get('email')?.hasError('required') && usuarioForm.get('email')?.touched" class="text-danger ps-1 fw-bold">El correo electrónico es obligatorio</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fa fa-lock fa-lg fs-4 pb-4 pe-3"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="password" id="form3Example4c" formControlName="password" class="form-control" />
+                                            <label class="form-label" for="form3Example4c">Contraseña</label>
+                                            <span *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched" class="text-danger ps-1 fw-bold">La contraseña es obligatorio</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fa fa-key fa-lg fs-4 pb-4 pe-3"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="password" id="form3Example4cd" formControlName="vereficarClave" class="form-control" />
+                                            <label class="form-label" for="form3Example4cd">Repetir contraseña</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <input class="form-check-input me-2" type="checkbox" value=""
+                                            id="form2Example3c" />
+                                        <label class="form-check-label" for="form2Example3">
+                                            I agree all statements in <a href="#!">Terms of service</a>
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button class="crearC btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                            type="submit" [disabled]="usuarioForm.invalid">Registrarse</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
