@@ -56,7 +56,7 @@
     padding: 50px ;
 }
 .textTopVentas{
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 .lineWhite{
@@ -67,7 +67,7 @@
     padding: 0 10%;
 }
 .divNoti{
-    height: 500px;
+    height: 380px;
     overflow-y: scroll;
     width: 500px;
 }
