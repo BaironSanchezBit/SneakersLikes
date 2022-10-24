@@ -1,11 +1,11 @@
 export class Post{
     _id?: number;
-    tittleArticle: string;
+    titleArticle: string;
     post: string;
     img: string;
 
-    constructor(tittleArticle: string ,post: string, img: string){
-        this.tittleArticle = tittleArticle;
+    constructor(titleArticle: string ,post: string, img: string){
+        this.titleArticle = titleArticle;
         this.post = post;
         this.img = img;
     }

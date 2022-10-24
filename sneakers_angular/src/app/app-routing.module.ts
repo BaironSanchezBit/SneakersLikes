@@ -8,6 +8,7 @@ import { PostComponent } from './components/post/post.component';
 import { NewpostComponent } from './components/newpost/newpost.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,8 +17,9 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'post', component: PostComponent},
   {path: 'newpost', component: NewpostComponent},
-  {path: 'crear-post', component: NewpostComponent},
-  {path: 'update-post/:id/:id', component: NewpostComponent},
+  {path: 'crear-post', component: FormularioPostComponent},
+  {path: 'update-post/:id', component: FormularioPostComponent},
+  {path: 'borrar-post/:id', component: NewpostComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
