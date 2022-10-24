@@ -21,6 +21,16 @@ export class ContactComponent implements OnInit {
       confirmButtonColor: "#E9560D"
     })
   }
-  
 
+  abrirAlertaSuscripcion(){
+    Swal.fire({
+      icon: 'error',
+      title: 'Trabajamos Fuerte',
+      text: '¡Por ahora no tenemos boletin de noticias!',
+      //footer: '<a href="">Puedes leer nuestras publicaciones</a>',
+      footer: '<a routerLink="/post">Puedes leer nuestras publicaciones</a>',
+      confirmButtonColor: "#E9560D"
+    })
+  }
 }
+
