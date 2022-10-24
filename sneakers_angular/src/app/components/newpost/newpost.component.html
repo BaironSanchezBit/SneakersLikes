@@ -9,32 +9,29 @@
     </div>
 </section>
 
-<div class="container mt-5">
-    <div class="w-100 d-flex flex-column">
-        <div class="col-12 d-flex  justify-content-center align-items-center my-4">
-            <p class="h1">Tus publicaciones</p>
-
-        </div>
+<section class="container">
+    <div class="d-flex justify-content-between align-items-center my-5">
+            <h1 class="fw-bold">Tus publicaciones</h1>
     </div>
-    <div class="row">
-        <div class=" col-1 "></div>
-        <div class="col-7 pe-5 mb-5" style="text-align: justify; font-family: 'Lato', sans-serif;">
-            <form [formGroup]="postForm" (ngSubmit)="crearPost()" class="conteiner">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Título del Artículo:</label>
-                    <input type="text" formControlName="tittleArticle" class="form-control" id="exampleFormControlInput1">
-                    <span *ngIf="postForm.get('tittleArticle')?.hasError('required') && postForm.get('tittleArticle')?.touched" class="text-danger ps-1"> El titulo de la publicacion es necesaria</span>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Publicación:</label>
-                    <textarea class="form-control" formControlName="post" style="height: 400px;" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    <span *ngIf="postForm.get('post')?.hasError('required') && postForm.get('post')?.touched" class="text-danger ps-1"> El contenido de la publicacion es necesaria</span>
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">Agrerar foto publicación:</label>
-                    <input class="form-control" formControlName="img" type="file" id="formFile">
-                    <span *ngIf="postForm.get('img')?.hasError('required') && postForm.get('img')?.touched" class="text-danger ps-1"> La imagen de la publicacion es necesaria</span>
-                </div>
-                <button type="submit"  class="btn btn-warning" [disabled]="postForm.invalid">Publicar artículo</button>
-            </form>
-        </div>
+    <h3>Total de publicaciones: {{listarPost.length}}</h3>
+    <table *ngIf="listarPost.length > 0" class="mt-4 table table-responsive table-striped"> 
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>fec_crea</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let miPost of listarPost">
+                <td>{{miPost.titleArticle}}</td>
+                <td></td>
+                <td>
+                    <button class="btn btn-warning mx-2 btn-sm" [routerLink]="['/update-post', miPost._id]" routerLinkActive="router-link-active" >Editar</button>
+                    <button class="btn btn-danger mx-2 btn-sm" (click)="eliminarPost(miPost._id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 class="text-danger text-center fw-bold" *ngIf="listarPost.length == 0">No hay publicaciones registradas</h2>
+    
+</section>

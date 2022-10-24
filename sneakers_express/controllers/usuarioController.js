@@ -13,7 +13,6 @@ exports.crearUsuario = async(req, res) => {
         res.send(usuario);
     } catch (error) {
         console.log(error)
-
         res.status(500).send('Ups... hubo un error');
     }
 }
