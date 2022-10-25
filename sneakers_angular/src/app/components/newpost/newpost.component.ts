@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Post } from "../../models/post";
 import Swal from "sweetalert2";
 import { PostService } from 'src/app/services/post.service';
@@ -51,7 +50,6 @@ export class NewpostComponent implements OnInit {
         }, (error) => {
           console.log(error)
         })
-        
       }
     })
   }
