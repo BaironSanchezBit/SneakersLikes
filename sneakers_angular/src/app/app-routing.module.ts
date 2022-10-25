@@ -8,18 +8,21 @@ import { PostComponent } from './components/post/post.component';
 import { NewpostComponent } from './components/newpost/newpost.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'nosotros', component: NosotrosComponent},
-  {path: 'dictionary', component: DictionaryComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'post', component: PostComponent},
-  {path: 'newpost', component: NewpostComponent},
-  {path: 'crear-post', component: NewpostComponent},
-  {path: 'update-post/:id/:id', component: NewpostComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent},
+  {path: 'diccionario', component: DictionaryComponent},
+  {path: 'contacto', component: ContactComponent},
+  {path: 'publicaciones', component: PostComponent},
+  {path: 'nueva-publicacion', component: NewpostComponent},
+  {path: 'inicio', component: HomeComponent},
+  {path: 'crear-publicacion', component: FormularioPostComponent},
+  {path: 'actualizar-publicacion/:id', component: FormularioPostComponent},
+  {path: 'borrar-publicacion/:id', component: NewpostComponent},
+  {path: 'registro', component: RegisterComponent},
+  {path: 'ingreso', component: LoginComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

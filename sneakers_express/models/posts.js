@@ -15,8 +15,9 @@ const PostSchema = mongoose.Schema({
     },
     fec_crea: {
         type: Date,
-        default: Date.now()
+        default: Date.now(),
+        required: true
     }
 });
 
-module.exports = mongoose.model('Post',PostSchema);
+module.exports = mongoose.model('post',PostSchema);

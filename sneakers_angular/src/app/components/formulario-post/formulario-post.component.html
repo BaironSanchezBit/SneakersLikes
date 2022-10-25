@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<section class="container">
+    <div class="row">
+        <div class=" col-1 "></div>
+        <div class="col-7 pe-5 mb-5" style="text-align: justify; font-family: 'Lato', sans-serif;">
+            <h1 class="fw-bold my-5">{{titulo_formulario | uppercase}}</h1>
+            <form [formGroup]="postForm" (ngSubmit)="dataPost()" class="conteiner">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Título del Artículo:</label>
+                    <input type="text" formControlName="titleArticle" class="form-control"
+                        id="exampleFormControlInput1">
+                    <span
+                        *ngIf="postForm.get('titleArticle')?.hasError('required') && postForm.get('titleArticle')?.touched"
+                        class="text-danger ps-1"> El titulo de la publicacion es necesaria</span>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Publicación:</label>
+                    <textarea class="form-control" formControlName="post" style="height: 400px;"
+                        id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <span *ngIf="postForm.get('post')?.hasError('required') && postForm.get('post')?.touched"
+                        class="text-danger ps-1"> El contenido de la publicacion es necesaria</span>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Agrerar foto publicación:</label>
+                    <input class="form-control" formControlName="img" type="text" id="formFile">
+                    <span *ngIf="postForm.get('img')?.hasError('required') && postForm.get('img')?.touched"
+                        class="text-danger ps-1"> La imagen de la publicacion es necesaria</span>
+                </div>
+                <button type="submit" class="btn btn-warning" [disabled]="postForm.invalid">Publicar artículo</button>
+            </form>
+        </div>
+    </div>
+</section>

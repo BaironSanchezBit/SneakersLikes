@@ -7,11 +7,27 @@ import { Post } from "../models/post";
   providedIn: 'root'
 })
 export class PostService {
-  url = 'http://localhost:4000/api/post';
+  url = 'http://localhost:4000/api/newpost';
 
   constructor(private http: HttpClient) { }
 
-  postUsuario(post: Post): Observable<any>{
-    return this.http.post(this.url, post);
+  getPosts():Observable<any>{
+    return this.http.get(`${this.url}/publication`)
+  }
+  
+  deletePost(id:string): Observable<any>{
+    return this.http.delete(`${this.url}/borrar-post/${id}`)
+  } 
+
+  crearPost(post: Post): Observable<any>{
+    return this.http.post(`${this.url}/crear-post`, post);
+  }
+
+  getPost(id:string):Observable<any>{
+    return this.http.get(`${this.url}/publication/${id}`)
+  }
+
+  getPostEspecifico(id:string): Observable<any>{
+    return this.http.get(`${this.url}/`)
   }
 }
