@@ -12,6 +12,14 @@
 .imgLogo{
     width: 500px;
 }
+.imgNot{
+    width: 100px;
+    height: 100px;
+}
+.scrollDiv{
+    height: 600px;
+    overflow: scroll;
+}
 .divWeb a{
     padding-right: 10px;
 }

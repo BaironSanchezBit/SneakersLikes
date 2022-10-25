@@ -22,7 +22,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Agrerar foto publicación:</label>
-                    <input class="form-control" formControlName="img" type="file" id="formFile">
+                    <input class="form-control" formControlName="img" type="text" id="formFile">
                     <span *ngIf="postForm.get('img')?.hasError('required') && postForm.get('img')?.touched"
                         class="text-danger ps-1"> La imagen de la publicacion es necesaria</span>
                 </div>

@@ -63,8 +63,8 @@ export class FormularioPostComponent implements OnInit {
           post: data.post,
           img: data.img
         })
-      }, ()=>{
-
+      }, (error)=>{
+        console.log(error)
       })
     }
   }

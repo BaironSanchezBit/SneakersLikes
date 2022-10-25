@@ -9,6 +9,6 @@ router.put('/update-post/:id', postController.actualizarPost);
 router.delete('/borrar-post/:id' , postController.borrarPost)
 router.get('/publication', postController.obtenerPost);
 router.get('/publication/:id', postController.obtenerPostEspecifico);
-
+router.get('/post/:id', postController.obtenerPostEspecifico)
 
 module.exports = router //Exportamos el modulo de rutas
