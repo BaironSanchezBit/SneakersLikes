@@ -262,23 +262,21 @@
 <section>
     <div class="container mt-5 mb-5">
         <div class="row">
-            <div *ngIf="listarPost.length > 0" class="col-12 p-3 col-sm-12 col-md-8 col-lg-8">
-                <div *ngFor="let miPrimer = listarPost">
-                    <img class="container w-100" src="{{miPrimer[5].img}}" alt="">
-                    <div>
-                        <h4 class=" d-flex d-grid justify-content-center align-content-center mt-2">
-                            {{miPrimer[5].titleArticle}}</h4>
-                    </div>
+            <a  [routerLink]="['/ver-publicaciones', listarPost[5]._id]" routerLinkActive="router-link-active" class="text-black text-decoration-none col-12 p-3 col-sm-12 col-md-8 col-lg-8 d-flex justify-content-center align-content-center flex-column">
+                <img class="container imgCoca" src="{{listarPost[5].img}}" alt="">
+                <div>
+                    <h4 class=" d-flex d-grid justify-content-center align-content-center mt-2">
+                        {{listarPost[5].titleArticle}}</h4>
                 </div>
-            </div>
+            </a>
 
             <div class="scrollDiv col-12 p-3 col-sm-12 col-md-12 col-lg-4">
                 <div *ngIf="listarPost.length > 0">
                     <a href="#" class="text-decoration-none text-black" *ngFor="let miPost of listarPost">
-                        <div class="w-100 d-flex justify-content-start align-items-center p-2">
+                        <a [routerLink]="['/ver-publicaciones', miPost._id]" class="text-black text-decoration-none w-100 d-flex justify-content-start align-items-center p-2">
                             <img class="imgNot" src="{{miPost.img}}" alt="">
                             <h6 class="ms-3">{{miPost.titleArticle}}</h6>
-                        </div>
+                        </a>
                     </a>
                 </div>
             </div>

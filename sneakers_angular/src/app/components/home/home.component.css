@@ -16,6 +16,10 @@
     width: 100px;
     height: 100px;
 }
+.imgCoca{
+    width: 600px;
+    height: 600px;
+}
 .scrollDiv{
     height: 600px;
     overflow: scroll;
