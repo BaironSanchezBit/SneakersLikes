@@ -26,8 +26,4 @@ export class PostService {
   getPost(id:string):Observable<any>{
     return this.http.get(`${this.url}/publication/${id}`)
   }
-
-  getPostEspecifico(id:string): Observable<any>{
-    return this.http.get(`${this.url}/`)
-  }
 }

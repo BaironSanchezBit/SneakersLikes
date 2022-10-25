@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   }
 
   obtenerPostEspecifico(id: string) {
-    this._postService.getPostEspecifico(id).subscribe((data) => {
+    this._postService.getPost(id).subscribe((data) => {
       console.log(data)
       this.listarPost = data
     }, (error) => {
