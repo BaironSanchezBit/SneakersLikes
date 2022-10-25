@@ -36,14 +36,13 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     position: fixed;
     width: 70px;
     height: 70px;
-    bottom: 50px;
-    right: 50px;
+    bottom: 140px;
+    right: 45px;
     background-color: #000000;
     color: rgb(255, 255, 255);
     border-radius: 50px;
     text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px rgba(156, 156, 156, 0.355);
+    /* box-shadow: 2px 2px 3px rgba(156, 156, 156, 0.355); */
     z-index: 100;
 }
 
@@ -53,7 +52,7 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
 
 /* BOTON HOVER  */
 .btn1 {
-    width: 122px;
+    width: 300px;
     height: 45px;
     background: #000000;
     /* position: absolute; */
@@ -65,10 +64,22 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     overflow: hidden;
 }
 
-.btn1::before {
+/* .btn1::before {
     font-family:'FontAwesome';
-    content: "\f001";
+    content: "\f001 ";
     font-size: 32px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+} */
+
+.btn1::before {
+    font-family:'Century Gothic', sans-serif;
+    content: "Escuchar Emisora";
+    font-size: 18px;
     color: rgb(255, 255, 255);
     position: absolute;
     top: 50%;
@@ -82,6 +93,17 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
 }
 
 .btn1::after {
+    content: '\f001 ';
+    color: white;
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+}
+/* .btn1::after {
     content: 'Emisora';
     color: white;
     font-family: 'Century Gothic', sans-serif;
@@ -91,7 +113,7 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all .5s ease-in-out;
-}
+} */
 
 .btn1:hover::after {
     top: 50%;

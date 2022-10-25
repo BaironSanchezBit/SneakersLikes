@@ -7,7 +7,8 @@ import { Post } from "../models/post";
   providedIn: 'root'
 })
 export class PostService {
-  url = 'http://localhost:4000/api/newpost';
+  //url = 'http://localhost:4000/api/newpost';
+  url = 'http://https://express-snakers-likes.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
