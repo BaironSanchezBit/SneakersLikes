@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'diccionario', component: DictionaryComponent},
   {path: 'contacto', component: ContactComponent},
   {path: 'publicaciones', component: PostComponent},
+  {path: 'ver-publicaciones/:id', component: PostComponent},
   {path: 'nueva-publicacion', component: NewpostComponent},
   {path: 'inicio', component: HomeComponent},
   {path: 'crear-publicacion', component: FormularioPostComponent},
