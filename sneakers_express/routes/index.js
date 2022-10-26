@@ -2,6 +2,10 @@
 const express = require('express'); //Importamos el servicio de express
 const router = express.Router(); //Llamamos para controlar las rutas junto con express
 const postController = require('../controllers/postController')
+const usuarioController = require('../controllers/usuarioController')
+
+router.post('/', usuarioController.crearUsuario);
+router.get('/', usuarioController.obtenerUsuario);
 
 //Configuramos la ruta usando el controlador
 router.post('/crear-post', postController.crearPost);

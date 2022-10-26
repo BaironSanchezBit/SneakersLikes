@@ -12,7 +12,8 @@ export class PostComponent implements OnInit {
 
   listarPost: Post[] = []
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
