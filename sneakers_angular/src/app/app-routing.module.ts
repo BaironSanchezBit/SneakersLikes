@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
 import { ListarComentsComponent } from './components/listar-coments/listar-coments.component';
+import { PostDefaultComponent } from './components/post-default/post-default.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'comentarios/:id', component: ListarComentsComponent},
 
   {path: 'publicaciones', component: PostComponent},
+  {path: 'publicacionDe', component: PostDefaultComponent},
   {path: 'ver-publicaciones/:id', component: PostComponent},
 
   {path: 'nueva-publicacion', component: NewpostComponent},

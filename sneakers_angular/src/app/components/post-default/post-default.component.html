@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<section c style=" height:350px; background-image: url('{{listarPost[5].banner}}'); background-repeat: no-repeat; background-size: cover;">
+</section>
+
+
+<div class="divPubli container mt-5 h-100 w-100 justify-content-start align-items-center">
+    <div class="div2 row col-8">
+        <div class="d-flex flex-column justify-content-center align-items-start"
+            style="text-align: justify; font-family: 'Lato', sans-serif;">
+            <div>
+                <div>
+                    <h2 class="mb-4"> {{listarPost[5].titleArticle}}
+                    </h2>
+                    <h6 style=" color:#ec6e33">Escrito por: Carlos Hernandez</h6>
+                    <h6 style=" color:#ec6e33" class=" mb-3">Fecha de Publicacion: Octubre 10 2022</h6>
+                </div>
+            </div>
+            <div>
+                {{listarPost[5].post}}
+            </div>
+            <img class="imgPost" src="{{listarPost[5].img}}" alt="">
+        </div>
+    </div>
+    <div class="ultimasNot col-3 ms-5 my-5">
+        <p class="fw-bold textUltimaNot">
+            ULTIMAS NOTICIAS
+        </p>
+        <div class="scrollDiv " *ngIf="listarPost.length > 0">
+            <div class="divSize w-100 " *ngFor="let miPost of listarPost" (click)="refresh()">
+                <a [routerLink]="['/ver-publicaciones', miPost._id]"
+                    class="text-black text-decoration-none w-100 d-flex flex-column justify-content-center align-items-center p-2">
+                    <img class="imgPubli" src="{{miPost.img2}}" alt="">
+                    <span>{{miPost.titleArticle}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

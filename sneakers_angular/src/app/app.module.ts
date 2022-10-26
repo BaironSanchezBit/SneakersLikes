@@ -17,6 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
 import { ListarComentsComponent } from './components/listar-coments/listar-coments.component';
+import { PostDefaultComponent } from './components/post-default/post-default.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListarComentsComponent } from './components/listar-coments/listar-comen
     RegisterComponent,
     LoginComponent,
     FormularioPostComponent,
-    ListarComentsComponent
+    ListarComentsComponent,
+    PostDefaultComponent
   ],
   imports: [
     BrowserModule,
