@@ -16,4 +16,5 @@ router.get('/publication/:id', postController.obtenerPostEspecifico);
 router.get('/ver-publicaciones/:id', postController.obtenerPostEspecifico);
 router.get('/post/:id', postController.obtenerPostEspecifico)
 
-module.exports = router //Exportamos el modulo de rutas
+
+module.exports = router //Exportamos el modulo de rutas 
