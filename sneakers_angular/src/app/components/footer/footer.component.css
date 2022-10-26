@@ -36,7 +36,7 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     position: fixed;
     width: 70px;
     height: 70px;
-    bottom: 140px;
+    bottom: 20px;
     right: 45px;
     background-color: #000000;
     color: rgb(255, 255, 255);
@@ -52,9 +52,9 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
 
 /* BOTON HOVER  */
 .btn1 {
-    width: 300px;
+    width: 60px;
     height: 45px;
-    background: #000000;
+    background: #62bc10;
     /* position: absolute; */
     /* top: 50%;
     left: 50%;
@@ -64,7 +64,7 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     overflow: hidden;
 }
 
-/* .btn1::before {
+.btn1::before {
     font-family:'FontAwesome';
     content: "\f001 ";
     font-size: 32px;
@@ -74,9 +74,9 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all .5s ease-in-out;
-} */
+}
 
-.btn1::before {
+/* .btn1::before {
     font-family:'Century Gothic', sans-serif;
     content: "Escuchar Emisora";
     font-size: 18px;
@@ -86,13 +86,13 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all .5s ease-in-out;
-}
+} */
 
 .btn1:hover::before {
     top: -30px;
 }
 
-.btn1::after {
+/* .btn1::after {
     content: '\f001 ';
     color: white;
     font-family: 'FontAwesome';
@@ -102,18 +102,18 @@ background: linear-gradient(0deg, rgba(190,49,27,1) 0%, rgba(255,143,0,1) 100%);
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all .5s ease-in-out;
-}
-/* .btn1::after {
-    content: 'Emisora';
+} */
+.btn1::after {
+    content: 'RADIO';
     color: white;
     font-family: 'Century Gothic', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     position: absolute;
     top: 150%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all .5s ease-in-out;
-} */
+}
 
 .btn1:hover::after {
     top: 50%;
