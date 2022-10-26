@@ -13,7 +13,7 @@ exports.crearPost = async (req, res) => {
         res.status(500).send('Ups... hubo un error');
     }
 }
-exports.obtenerPostEspecifico = async (req, res) => {
+exports.obtenerPostEspecifico = async (req, res) => {   
 
     try {
         let post_especifico = await Post.findById(req.params.id);
