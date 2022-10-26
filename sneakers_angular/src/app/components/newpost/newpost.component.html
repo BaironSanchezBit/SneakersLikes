@@ -12,6 +12,7 @@
 <section class="container">
     <div class="d-flex justify-content-between align-items-center my-5">
             <h1 class="fw-bold">Tus publicaciones</h1>
+            <button routerLink="/crear-publicacion" type="button" class="btn btn-success ">Crear Publicación</button>
     </div>
     <h3>Total de publicaciones: {{listarPost.length}}</h3>
     <table *ngIf="listarPost.length > 0" class="mt-4 table table-responsive table-striped"> 
