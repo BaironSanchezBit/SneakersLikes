@@ -12,6 +12,7 @@ router.put('/actualizar-publicacion/:id', postController.actualizarPost);
 router.delete('/borrar-publicacion/:id' , postController.borrarPost)
 router.get('/publicaciones', postController.obtenerPost);
 router.get('/publicacion/:id', postController.obtenerPostEspecifico);
+router.get('/publicacionDe', postController.obtenerPost)
 
 router.post('/crear-comentario', comentController.crearComentario);
 router.put('/actualizar-comentario/:id', comentController.actualizarPost);
