@@ -13,6 +13,14 @@ const PostSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    banner: {
+        type: String,
+        required: true
+    },
+    img2: {
+        type: String,
+        required: true
+    },
     fec_crea: {
         type: Date,
         default: Date.now(),

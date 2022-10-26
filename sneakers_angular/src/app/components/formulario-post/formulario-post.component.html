@@ -1,10 +1,9 @@
 <app-navbar></app-navbar>
-<section class="container">
-    <div class="row">
-        <div class=" col-1 "></div>
-        <div class="col-7 pe-5 mb-5" style="text-align: justify; font-family: 'Lato', sans-serif;">
+<section class="container w-100">
+    <div class="w-100 d-flex justify-content-center">
+        <div class="col-10 mb-5" style="text-align: justify; font-family: 'Lato', sans-serif;">
             <h1 class="fw-bold my-5">{{titulo_formulario | uppercase}}</h1>
-            <form [formGroup]="postForm" (ngSubmit)="dataPost()" class="conteiner">
+            <form [formGroup]="postForm" (ngSubmit)="dataPost()" class="conteiner w-100">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Título del Artículo:</label>
                     <input type="text" formControlName="titleArticle" class="form-control"
@@ -21,12 +20,25 @@
                         class="text-danger ps-1"> El contenido de la publicacion es necesaria</span>
                 </div>
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Agrerar foto publicación:</label>
+                    <label for="formFile" class="form-label">Agregar banner de la publicación:</label>
+                    <input class="form-control" formControlName="banner" type="text" id="formFile">
+                    <span *ngIf="postForm.get('banner')?.hasError('required') && postForm.get('banner')?.touched"
+                        class="text-danger ps-1"> El banner de la publicacion es necesaria</span>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Agregar primera foto de la publicación:</label>
                     <input class="form-control" formControlName="img" type="text" id="formFile">
                     <span *ngIf="postForm.get('img')?.hasError('required') && postForm.get('img')?.touched"
-                        class="text-danger ps-1"> La imagen de la publicacion es necesaria</span>
+                        class="text-danger ps-1"> La imagen principal de la publicacion es necesaria</span>
                 </div>
-                <button type="submit" class="btn btn-warning" [disabled]="postForm.invalid">Publicar artículo</button>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Agregar segunda foto de la publicación:</label>
+                    <input class="form-control" formControlName="img2" type="text" id="formFile">
+                    <span *ngIf="postForm.get('img2')?.hasError('required') && postForm.get('img2')?.touched"
+                        class="text-danger ps-1"> La imagen secundaria de la publicacion es necesaria</span>
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="postForm.invalid">Publicar artículo</button>
+                <button type="submit" class="btn btn-warning mx-3" routerLink="/nueva-publicacion" >Ver publicaciones</button>
             </form>
         </div>
     </div>

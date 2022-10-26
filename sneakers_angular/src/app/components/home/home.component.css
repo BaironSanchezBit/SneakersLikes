@@ -17,7 +17,7 @@
     height: 100px;
 }
 .imgCoca{
-    width: 600px;
+    width: 800px;
     height: 600px;
 }
 .scrollDiv{
@@ -93,6 +93,10 @@
         overflow-y: scroll;
         width: 400px !important;
     }
+    .imgCoca{
+        width: 480px !important;
+        height: 400px !important;
+    }
 }
 @media (max-width: 930px){
     .imgNotFirst{
@@ -155,5 +159,15 @@
     }
     .imgLogo{
         width: 380px;
+    }
+    .imgCoca{
+        width: 480px;
+        height: 400px;
+    }
+}
+@media (max-width: 1400px){
+    .imgCoca{
+        width: 650px;
+        height: 500px;
     }
 }
