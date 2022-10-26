@@ -25,4 +25,5 @@ router.get('/usuario/:id', md_auth.ensureAuth,UserController.getUser);
 router.get('/usuario/:page?', md_auth.ensureAuth,UserController.getUsers);
 router.put('/actualizar-usuario/:id', md_auth.ensureAuth,UserController.updateUser);
 
-module.exports = router //Exportamos el modulo de rutas
+
+module.exports = router //Exportamos el modulo de rutas 
