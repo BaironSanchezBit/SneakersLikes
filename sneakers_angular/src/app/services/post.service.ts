@@ -7,24 +7,28 @@ import { Post } from "../models/post";
   providedIn: 'root'
 })
 export class PostService {
-  //url = 'http://localhost:4000/api/newpost';
-  url = 'http://https://express-snakers-likes.herokuapp.com/api';
+
+  url = 'http://localhost:4000/api';
 
   constructor(private http: HttpClient) { }
 
   getPosts():Observable<any>{
-    return this.http.get(`${this.url}/publication`)
+    return this.http.get(`${this.url}/publicaciones`)
   }
   
   deletePost(id:string): Observable<any>{
-    return this.http.delete(`${this.url}/borrar-post/${id}`)
+    return this.http.delete(`${this.url}/borrar-publicacion/${id}`);
   } 
 
   crearPost(post: Post): Observable<any>{
-    return this.http.post(`${this.url}/crear-post`, post);
+    return this.http.post(`${this.url}/crear-publicacion`, post);
   }
 
   getPost(id:string):Observable<any>{
-    return this.http.get(`${this.url}/publication/${id}`)
+    return this.http.get(`${this.url}/publicacion/${id}`);
+  }
+
+  putPost(id: string, post: Post): Observable<any>{
+    return this.http.put(`${this.url}/actualizar-publicacion/${id}`, post);
   }
 }

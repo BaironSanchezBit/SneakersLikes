@@ -9,21 +9,36 @@ import { NewpostComponent } from './components/newpost/newpost.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
+import { ListarComentsComponent } from './components/listar-coments/listar-coments.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+
   {path: 'nosotros', component: NosotrosComponent},
+
   {path: 'diccionario', component: DictionaryComponent},
+
   {path: 'contacto', component: ContactComponent},
+  {path: 'crear-comentario', component: ContactComponent},
+
+  {path: 'comentarios', component: ListarComentsComponent},
+  {path: 'borrar-comentario/:id', component: ListarComentsComponent},
+  {path: 'actualizar-comentario/:id' , component: ListarComentsComponent},
+  {path: 'comentarios/:id', component: ListarComentsComponent},
+
   {path: 'publicaciones', component: PostComponent},
   {path: 'ver-publicaciones/:id', component: PostComponent},
+
   {path: 'nueva-publicacion', component: NewpostComponent},
-  {path: 'inicio', component: HomeComponent},
+  {path: 'borrar-publicacion/:id', component: NewpostComponent},
+
   {path: 'crear-publicacion', component: FormularioPostComponent},
   {path: 'actualizar-publicacion/:id', component: FormularioPostComponent},
-  {path: 'borrar-publicacion/:id', component: NewpostComponent},
+  
   {path: 'registro', component: RegisterComponent},
+  
   {path: 'ingreso', component: LoginComponent},
+
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

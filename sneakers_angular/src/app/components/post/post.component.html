@@ -1,77 +1,40 @@
 <app-navbar></app-navbar>
 
-<section style=" height:350px; background-image: url('assets/img/Noti_Banner_04_A.png'); ">
-    <!-- <div class="container d-flex flex-column align-items-start justify-content-end p-5 h-100">
-        <h3> NUEVAS ZAPATILLAS DE LUJO NIKE</h3>
-        <h6> Escrito por: Carlos Hernandez</h6>
-    </div> -->
+<section c style=" height:350px; background-image: url('{{dataPost.banner}}'); background-repeat: no-repeat; background-size: cover;">
 </section>
 
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-lg-7 pe-5 mb-5 offset-1" style="text-align: justify; font-family: 'Lato', sans-serif;">
+<div class="divPubli container mt-5 h-100 w-100 justify-content-start align-items-center">
+    <div class="div2 row col-8">
+        <div class="d-flex flex-column justify-content-center align-items-start"
+            style="text-align: justify; font-family: 'Lato', sans-serif;">
             <div>
                 <div>
-                    <h2 class="mb-4"> Sneaker Society espera acoger a 10000 visitantes en su próxima edición en Colombia
+                    <h2 class="mb-4"> {{dataPost.titleArticle}}
                     </h2>
                     <h6 style=" color:#ec6e33">Escrito por: Carlos Hernandez</h6>
-                    <h6 style=" color:#ec6e33" class=" mb-3" >Fecha de Publicacion: Octubre 10 2022</h6>
+                    <h6 style=" color:#ec6e33" class=" mb-3">Fecha de Publicacion: Octubre 10 2022</h6>
                 </div>
             </div>
-            La feria de sneakers y streetwear de Colombia Sneaker Society celebró su cuarta edición el pasado 7 de octubre. El evento, que se realizó en el centro de eventos El Tesoro, en la ciudad de Medellín, contó con la asistencia de un promedio de 10.000 visitantes en sus pasillos. 
-Según señala la organización, Sneaker Society es a la fecha la feria de sneakers y streetwear más importante de Colombia y Sudamérica, con un enfoque comercial y cultural que busca implantar esta tendencia como cultura en la región. 
-Nike, Adidas, New Balance, Sprayground, Agaval Store y Crep Protect, se incluyen entre los patrocinadores de esta edición, donde también se suma Falabella en Colombia. Actualmente, la feria presentó un centenar de ejemplares y comerciantes, desde emprendedores y revendedores, hasta las grandes marcas y sus propuestas de edición limitada. 
-La feria que nació en 2019 con la participación de 2500 asistentes y 12 invitados especiales, ha crecido a grandes pasos de la mano de los embajadores de marca y el alza en la demanda de la categoría. Para la edición de 2021 ya contaba con más de 5000 asistentes, 16 sneaker talks y más de 15 invitados internacionales. 
-La cultura urbana toma cada vez más fuerza en Medellín y en todo Colombia, en línea con la tendencia internacional, pero también de la mano de la evolución propia de la ciudad, donde desde hace más de una década los jóvenes cambiaron la violencia por el arte, la música y la cultura.
-
-
-            <div class="container mt-2 p-1" style="background-color: rgb(236, 236, 236);">
-                <h4 class="mt-4 ms-5 ">Últimos Comentarios:</h4>
-                <h6 class="mt-5 ms-5">Jorge Fernando dice:</h6>
-                <div class="p-5"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse suscipit at
-                    reprehenderit voluptate quisquam ad voluptatibus, inventore voluptatem consequuntur saepe enim
-                    eos delectus iusto deleniti possimus eveniet eligendi provident incidunt?</div>
+            <div>
+                {{dataPost.post}}
             </div>
-            <div class="container">
-                <h4 class="mt-5 ">Nuevo Comentario</h4>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label, height: 200px;">Comentario:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Correo:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="nombre@ejemplo.com">
-                </div>
-                <button type="button" class="btn btn-secondary">Guardar Comentario</button>
-
-            </div>
+            <img class="imgPost" src="{{dataPost.img}}" alt="">
         </div>
-
-
-        <div class="col-12 col-lg-3">ULTIMAS NOTICIAS
-            <div class="conteiner mt-3">
-                <h5> NOTICIA 1</h5>
-                <div> <img src="https://i.ebayimg.com/images/g/CE0AAOSwyDdgizQx/s-l1600.jpg" style="width:100% ;"
-                        alt=""></div>
-                <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero ab sit consequuntur culpa
-                </span>
-                <h5 class=" mt-4"> NOTICIA 2</h5>
-                <div> <img src="https://i.ebayimg.com/images/g/CE0AAOSwyDdgizQx/s-l1600.jpg" style="width:100% ;"
-                        alt=""></div>
-                <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero ab sit consequuntur culpa
-                </span>
-                <h5 class=" mt-4"> NOTICIA 3</h5>
-                <div> <img src="https://i.ebayimg.com/images/g/CE0AAOSwyDdgizQx/s-l1600.jpg" style="width:100% ;"
-                        alt=""></div>
-                <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero ab sit consequuntur culpa
-                </span>
+    </div>
+    <div class="col-3 offset-1 py-5 text-center ">
+        <p class="fw-bold">
+            ULTIMAS NOTICIAS
+        </p>
+        <div class="scrollDiv " *ngIf="listarPost.length > 0">
+            <div class="divSize w-100 " *ngFor="let miPost of listarPost" (click)="refresh()">
+                <a [routerLink]="['/ver-publicaciones', miPost._id]"
+                    class="text-black text-decoration-none w-100 d-flex flex-column justify-content-start align-items-center p-2">
+                    <img class="imgPubli" src="{{miPost.img}}" alt="">
+                    <span>{{miPost.titleArticle}}</span>
+                </a>
             </div>
         </div>
     </div>
+
 </div>
