@@ -5,7 +5,7 @@
     <div class=" w-100" *ngIf="listarComent.length > 0">
         <div *ngFor="let miComent of listarComent;index as i; first as isFirst" class="bg-light d-flex justify-content-between px-5 py-4 mb-3">
             <div class="">
-                <h4 class="py-2"><span class="me-3 fs-5">{{i}}.</span> {{miComent.name}} </h4>
+                <h4 class="py-2"><span class="me-3 fs-5">{{i+1}}.</span> {{miComent.name}} </h4>
                 <p>
                     {{miComent.coment}}
                 </p>

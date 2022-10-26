@@ -22,15 +22,15 @@
             <img class="imgPost" src="{{dataPost.img}}" alt="">
         </div>
     </div>
-    <div class="col-3 offset-1 py-5 text-center ">
-        <p class="fw-bold">
+    <div class="ultimasNot col-3 ms-5 my-5">
+        <p class="fw-bold textUltimaNot">
             ULTIMAS NOTICIAS
         </p>
         <div class="scrollDiv " *ngIf="listarPost.length > 0">
             <div class="divSize w-100 " *ngFor="let miPost of listarPost" (click)="refresh()">
                 <a [routerLink]="['/ver-publicaciones', miPost._id]"
-                    class="text-black text-decoration-none w-100 d-flex flex-column justify-content-start align-items-center p-2">
-                    <img class="imgPubli" src="{{miPost.img}}" alt="">
+                    class="text-black text-decoration-none w-100 d-flex flex-column justify-content-center align-items-center p-2">
+                    <img class="imgPubli" src="{{miPost.img2}}" alt="">
                     <span>{{miPost.titleArticle}}</span>
                 </a>
             </div>

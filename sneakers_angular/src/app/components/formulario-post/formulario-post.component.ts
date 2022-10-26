@@ -21,7 +21,9 @@ export class FormularioPostComponent implements OnInit {
     this.postForm = this.fb.group({
       titleArticle: ['', [Validators.required]],
       post: ['', [Validators.required]],
+      banner: ['', [Validators.required]],
       img: ['', [Validators.required]],
+      img2: ['', [Validators.required]]
     })
     this.id = this.idRoute.snapshot.paramMap.get('id')
   }
@@ -36,7 +38,9 @@ export class FormularioPostComponent implements OnInit {
     const POST: Post = {
       titleArticle: this.postForm.get('titleArticle')?.value,
       post: this.postForm.get('post')?.value,
-      img: this.postForm.get('img')?.value
+      img: this.postForm.get('img')?.value,
+      banner: this.postForm.get('banner')?.value,
+      img2: this.postForm.get('img2')?.value
     }
 
     console.log(POST)

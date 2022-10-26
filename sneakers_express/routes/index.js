@@ -2,11 +2,9 @@
 const express = require('express'); //Importamos el servicio de express
 const router = express.Router(); //Llamamos para controlar las rutas junto con express
 const postController = require('../controllers/postController')
-const usuarioController = require('../controllers/usuarioController')
+const UserController = require('../controllers/user')
 const comentController = require('../controllers/ComentController')
-
-router.post('/', usuarioController.crearUsuario);
-router.get('/', usuarioController.obtenerUsuario);
+var md_auth = require('../middlewares/authenticated')
 
 //Configuramos la ruta usando el controlador
 router.post('/crear-publicacion', postController.crearPost);
@@ -21,6 +19,10 @@ router.delete('/borrar-comentario/:id', comentController.borrarComent);
 router.get('/comentarios', comentController.obtenerPost);
 router.get('/comentario/:id', comentController.obtenerComentEspecifico);
 
-
+router.post('registro', UserController.saveUser);
+router.post('/ingreso', UserController.loginUser);
+router.get('/usuario/:id', md_auth.ensureAuth,UserController.getUser);
+router.get('/usuario/:page?', md_auth.ensureAuth,UserController.getUsers);
+router.put('/actualizar-usuario/:id', md_auth.ensureAuth,UserController.updateUser);
 
 module.exports = router //Exportamos el modulo de rutas
