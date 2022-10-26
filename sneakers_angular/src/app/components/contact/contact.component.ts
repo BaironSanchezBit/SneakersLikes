@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Coment } from "../../models/coments";
+import Swal from "sweetalert2";
+import { ComentService } from 'src/app/services/coment.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,12 +12,43 @@ import Swal from 'sweetalert2';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  ComentForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private router: Router, private _comentService: ComentService, private idRoute: ActivatedRoute) {
+    this.ComentForm = this.fb.group({
+      name: ['', [Validators.required]],
+      coment: ['', [Validators.required]],
+    })
+  }
 
   ngOnInit(): void {
   }
 
-  abrirAlerta(){
+  refresh(): void { window.location.reload(); }
+
+  dataComent() {
+    console.log(this.ComentForm);
+
+    const COMENT: Coment = {
+      name: this.ComentForm.get('name')?.value,
+      coment: this.ComentForm.get('coment')?.value,
+    }
+    this._comentService.crearComent(COMENT).subscribe(data => {
+      Swal.fire({
+        title: 'Excelente!',
+        text: '!Muchas gracias por comentar!',
+        icon: 'success',
+        confirmButtonText: 'Vale',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.refresh();
+        }
+      })
+    }, error => {
+      console.log(error)
+    })
+  }
+  abrirAlerta() {
     Swal.fire({
       icon: 'info',
       title: 'Discúlpanos',
@@ -22,7 +57,7 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  abrirAlertaSuscripcion(){
+  abrirAlertaSuscripcion() {
     Swal.fire({
       icon: 'error',
       title: 'Trabajamos Fuerte',

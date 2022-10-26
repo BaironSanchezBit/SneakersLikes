@@ -25,46 +25,80 @@
                 <i class="faCont fa fa-phone-square fs-4 pe-3" aria-hidden="true"></i>
                 <p class="m-0 fw-bold text-secondary">(+57) 300 000 0000</p>
             </div>
+<<<<<<< HEAD
             <div class="py-4">           
                 <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/twitter.ico"  alt=""></button>
                 <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/instagram.ico" alt=""></button>
                 <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/facebook.ico" alt=""></button>
 </div>
+=======
+            <div class="py-4">
+                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/twitter.ico"
+                        alt=""></button>
+                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/instagram.ico"
+                        alt=""></button>
+                <button type="button" class="btn" (click)="abrirAlerta()"> <img src="assets/img/facebook.ico"
+                        alt=""></button>
+            </div>
+>>>>>>> 0327e9be35fae6c88af8f2af0fb7028fc68f0ec1
         </div>
         <!-- sonrisa  <p>&#128512;</p>  -->
-        
-        <div class="div2 col-6" style="margin-top: -30px;">
+
+        <form  class="div2 col-6" style="margin-top: -30px;" [formGroup]="ComentForm" (ngSubmit)="dataComent()">
             <p class=" text-center" style="font-size:80px; margin: -20px;">😎</p>
             <p class="textPrin h1 fw-bold pb-3 text-center"> ¡GRACIAS! <br> Por estar aquí </p>
-            <p class=" text-center">Si haz llegado a esta sección, es por que <b style="font-size: 17px;"> eres 
-                importante para el equipo de creadores de SNEAKERS LIKES,</b> 
+            <p class=" text-center">Si haz llegado a esta sección, es por que <b style="font-size: 17px;"> eres
+                    importante para el equipo de creadores de SNEAKERS LIKES,</b>
                 haces parte de nuestro parche y eres de las pocas personas que pueden ver nuestra blog. <br>
-                Por esta razón queremos que te inspires y <b style="font-size: 17px;">nos dejes una comentario sobre 
-                ¿Cómo te pareció nuestra web?.</b> <br> <br> <b style="font-size: 19px;">Ahora dale estilo a tu vida y ponte tus 
-                Sneakers favoritas</b> </p>
+                Por esta razón queremos que te inspires y <b style="font-size: 17px;">nos dejes una comentario sobre
+                    ¿Cómo te pareció nuestra web?.</b> <br> <br> <b style="font-size: 19px;">Ahora dale estilo a tu vida
+                    y ponte tus
+                    Sneakers favoritas</b> </p>
             <div class="mb-3 mt-5">
+<<<<<<< HEAD
                 <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Comentario:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder=""></textarea>
+=======
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" formControlName="name" class="form-control" id="exampleFormControlInput1"
+                    placeholder="">
+                <span *ngIf="ComentForm.get('name')?.hasError('required') && ComentForm.get('name')?.touched"
+                    class="text-danger ps-1"> El nombre del comentario es necesario</span>
             </div>
-            <button type="button" class="btn btn-secondary">Enviar comentario 👍 </button> 
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+                <textarea class="form-control" formControlName="coment" id="exampleFormControlTextarea1" rows="3"
+>>>>>>> 0327e9be35fae6c88af8f2af0fb7028fc68f0ec1
+                    placeholder=""></textarea>
+                <span *ngIf="ComentForm.get('coment')?.hasError('required') && ComentForm.get('coment')?.touched"
+                    class="text-danger ps-1"> El comentario es necesario</span>
+            </div>
+            <button type="submit" class="btn btn-secondary"  [disabled]="ComentForm.invalid">Enviar comentario 👍 </button>
+        </form>
+    </div>
+</section>
+
+<<<<<<< HEAD
+<section class="sectionSus pt-5 pb-5" style=" background-image: url('assets/img/Suscribete_Fondo.jpg'); width:auto; height: 450%;background-size: cover;">
+=======
+<section class="sectionSus pt-5 pb-5"
+    style=" background-image: url('assets/img/Suscribete_Fondo.jpg'); width: 100%; height: 450%;">
+>>>>>>> 0327e9be35fae6c88af8f2af0fb7028fc68f0ec1
+    <div class="d-flex justify-content-center flex-column align-items-center">
+        <img src="assets/img/logoWhite01.png" class="imgLogo" alt="">
+        <p class="fs-1 fw-bold text-white">SUSCRÍBETE</p>
+        <p class="lorem text-white">Escribe tu correo electrónico para recibir la mejor información de la moda
+            Sneakers. </p>
+        <div class="inputSus input-group mb-3">
+            <input type="email" class=" form-control opacity-75" placeholder="Correo electrónico"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-secondary text-white" type="button" data-bs-target="#suscribeteModal"
+                (click)="abrirAlertaSuscripcion()">SUSCRÍBETE</button>
         </div>
     </div>
 </section>
 
-<section class="sectionSus pt-5 pb-5" style=" background-image: url('assets/img/Suscribete_Fondo.jpg'); width:auto; height: 450%;background-size: cover;">
-    <div class="d-flex justify-content-center flex-column align-items-center">
-        <img src="assets/img/logoWhite01.png" class="imgLogo" alt="">
-        <p class="fs-1 fw-bold text-white">SUSCRÍBETE</p>
-        <p class="lorem text-white">Escribe tu correo electrónico para recibir la mejor información de la moda Sneakers. </p>
-        <div class="inputSus input-group mb-3">
-            <input type="email" class=" form-control opacity-75" placeholder="Correo electrónico" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
-            <button class="btn btn-secondary text-white" type="button" data-bs-target="#suscribeteModal" (click)="abrirAlertaSuscripcion()" >SUSCRÍBETE</button>
-        </div>
-    </div>
-</section>

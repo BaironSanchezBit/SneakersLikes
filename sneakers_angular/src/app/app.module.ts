@@ -16,6 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
+import { ListarComentsComponent } from './components/listar-coments/listar-coments.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormularioPostComponent } from './components/formulario-post/formulario
     NewpostComponent,
     RegisterComponent,
     LoginComponent,
-    FormularioPostComponent
+    FormularioPostComponent,
+    ListarComentsComponent
   ],
   imports: [
     BrowserModule,

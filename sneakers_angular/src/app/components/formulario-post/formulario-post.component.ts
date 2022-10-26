@@ -40,18 +40,30 @@ export class FormularioPostComponent implements OnInit {
     }
 
     console.log(POST)
-    this._postService.crearPost(POST).subscribe(data => {
-      this.router.navigate(['/newpost']);
-      Swal.fire({
-        title: 'Exito!',
-        text: 'La publicacion se realizó correctamente',
-        icon: 'success',
-        confirmButtonText: 'Vale'
+    if (this.id !== null) {
+      this._postService.putPost(this.id, POST).subscribe(data => {
+        console.log(data);
+        this.router.navigate(['/publicaciones']);
+        Swal.fire({
+          title: 'Exito!',  
+          text: 'Se actualizó la publicación correctamente',
+          icon: 'success',
+          confirmButtonText: 'Vale'
+        })
       })
-    }, error => {
-      console.log(error)
-    })
-
+    } else {
+      this._postService.crearPost(POST).subscribe(data => {
+        this.router.navigate(['/publicaciones']);
+        Swal.fire({
+          title: 'Exito!',  
+          text: 'La publicacion se realizó correctamente',
+          icon: 'success',
+          confirmButtonText: 'Vale'
+        })
+      }, error => {
+        console.log(error)
+      })
+    }
   }
 
   accionEditar(){
