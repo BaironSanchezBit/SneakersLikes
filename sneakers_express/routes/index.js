@@ -15,10 +15,10 @@ router.get('/publicacion/:id', postController.obtenerPostEspecifico);
 router.get('/publicacionDe', postController.obtenerPost)
 
 router.post('/crear-comentario', comentController.crearComentario);
-router.put('/actualizar-comentario/:id', comentController.actualizarPost);
-router.delete('/borrar-comentario/:id', comentController.borrarComent);
+router.delete('/borrar-comentarios-admin/:id', comentController.borrarComent);
 router.get('/comentarios', comentController.obtenerPost);
-router.get('/comentario/:id', comentController.obtenerComentEspecifico);
+router.get('/comentarios-admin', comentController.obtenerPost);
+router.get('/comentarios-admin/:id', comentController.obtenerComentEspecifico);
 
 router.post('registro', UserController.saveUser);
 router.post('/ingreso', UserController.loginUser);

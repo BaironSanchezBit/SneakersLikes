@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
 import { ListarComentsComponent } from './components/listar-coments/listar-coments.component';
 import { PostDefaultComponent } from './components/post-default/post-default.component';
+import { ComentarioAdminComponent } from './components/comentario-admin/comentario-admin.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,9 +24,9 @@ const routes: Routes = [
   {path: 'crear-comentario', component: ContactComponent},
 
   {path: 'comentarios', component: ListarComentsComponent},
-  {path: 'borrar-comentario/:id', component: ListarComentsComponent},
-  {path: 'actualizar-comentario/:id' , component: ListarComentsComponent},
-  {path: 'comentarios/:id', component: ListarComentsComponent},
+  {path: 'comentarios-admin', component: ComentarioAdminComponent},
+  {path: 'borrar-comentarios-admin/:id', component: ComentarioAdminComponent},
+  {path: 'comentarios-admin/:id', component: ComentarioAdminComponent},
 
   {path: 'publicaciones', component: PostComponent},
   {path: 'publicacionDe', component: PostDefaultComponent},

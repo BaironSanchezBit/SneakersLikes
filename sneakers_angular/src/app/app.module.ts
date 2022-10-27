@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormularioPostComponent } from './components/formulario-post/formulario-post.component';
 import { ListarComentsComponent } from './components/listar-coments/listar-coments.component';
 import { PostDefaultComponent } from './components/post-default/post-default.component';
+import { ComentarioAdminComponent } from './components/comentario-admin/comentario-admin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PostDefaultComponent } from './components/post-default/post-default.com
     LoginComponent,
     FormularioPostComponent,
     ListarComentsComponent,
-    PostDefaultComponent
+    PostDefaultComponent,
+    ComentarioAdminComponent
   ],
   imports: [
     BrowserModule,
