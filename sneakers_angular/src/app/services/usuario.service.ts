@@ -8,13 +8,13 @@ import { Usuario } from "../models/usuario";
 })
 export class UsuarioService {
 
-  //url = 'http://localhost:4000/api';
-  url = 'https://express-snakers-likes.herokuapp.com/api';
+  url = 'http://localhost:4000/api';
+  //url = 'https://express-snakers-likes.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
   postUsuario(usuario: Usuario): Observable<any>{
-    return this.http.post(this.url, usuario);
+    return this.http.post(`${this.url}/crear-usuario`, usuario);
   }
 
   getUsuarios(): Observable<any>{

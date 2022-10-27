@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
-      vereficarClave: ['', [Validators.required]]
+      vereficarClave: ['', [Validators.required]],
     })
   }
 
@@ -43,17 +43,17 @@ export class RegisterComponent implements OnInit {
       const USUARIO: Usuario = {
         name: this.usuarioForm.get('name')?.value,
         email: this.usuarioForm.get('email')?.value,
-        password: this.usuarioForm.get('password')?.value
+        password: this.usuarioForm.get('password')?.value,
       }
 
       this._usuarioService.postUsuario(USUARIO).subscribe(data => {
-        this.router.navigate(['/login']);
         Swal.fire({
           title: 'Exito',
           text: 'El registro se realizó correctamente',
           icon: 'success',
           confirmButtonText: 'Vale'
         })
+        this.router.navigate(['/ingreso']);
       }, error =>{
         console.log(error);
       })

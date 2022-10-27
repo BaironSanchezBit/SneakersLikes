@@ -39,6 +39,7 @@ const routes: Routes = [
   {path: 'actualizar-publicacion/:id', component: FormularioPostComponent},
   
   {path: 'registro', component: RegisterComponent},
+  {path: 'crear-usuario', component: RegisterComponent},
   
   {path: 'ingreso', component: LoginComponent},
 
