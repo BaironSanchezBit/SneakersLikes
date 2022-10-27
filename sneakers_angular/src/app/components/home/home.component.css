@@ -71,6 +71,11 @@
     font-size: 5rem;
     font-weight: bold;
 }
+.textInicioBlog{
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .lineWhite{
     border-top: 4px solid #eee;
     padding-right: 10%;
