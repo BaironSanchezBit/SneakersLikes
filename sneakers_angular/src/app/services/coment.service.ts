@@ -8,7 +8,8 @@ import { Coment } from "../models/coments";
 })
 export class ComentService {
 
-  url = 'http://localhost:4000/api';
+  //url = 'http://localhost:4000/api';
+  url = 'https://express-snakers-likes.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
