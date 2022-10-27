@@ -28,33 +28,4 @@ export class ListarComentsComponent implements OnInit {
     })
   }
 
-  refresh(): void { window.location.reload(); }
-
-  eliminarComent(id: any) {
-    Swal.fire({
-      title: 'Esta seguro de eliminar el comentario',
-      text: 'Si confirmas el comenntario se eliminará por siempre',
-      icon: 'warning',
-      iconColor: '#ff8c00',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Si, Borrar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this._comentService.deleteComent(id).subscribe((data) => {
-          Swal.fire(
-            'Eliminado',
-            'El comentario se eliminó correctamente',
-            'success'
-          )
-          setTimeout(() =>{
-            this.refresh();
-          }, 1000)
-        }, (error) => {
-          console.log(error)
-        })
-      }
-    })
-  }
 }

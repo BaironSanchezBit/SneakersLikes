@@ -16,9 +16,13 @@ export class ComentService {
   getComents():Observable<any>{
     return this.http.get(`${this.url}/comentarios`)
   }
+
+  getComentsAd():Observable<any>{
+    return this.http.get(`${this.url}/comentarios-admin`)
+  }
   
-  deleteComent(id:string): Observable<any>{
-    return this.http.delete(`${this.url}/borrar-comentario/${id}`)
+  deleteComentAd(id:string): Observable<any>{
+    return this.http.delete(`${this.url}/borrar-comentarios-admin/${id}`)
   } 
 
   crearComent(coment: Coment): Observable<any>{
@@ -26,6 +30,6 @@ export class ComentService {
   }
 
   getComent(id:string):Observable<any>{
-    return this.http.get(`${this.url}/comentarios/${id}`)
+    return this.http.get(`${this.url}/comentarios-admin/${id}`)
   }
 }
