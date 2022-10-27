@@ -4,7 +4,7 @@
 .imgPost{
     width: 500px;
     height: 500px;
-    margin: 5% 0;
+    padding: 0% 0;
 }
 .scrollDiv{
     overflow: scroll;
@@ -27,8 +27,8 @@
         flex-direction: column;
     }
     .imgPost{
-        width: 410px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
     }
     .div2{
         width: 90vw;
